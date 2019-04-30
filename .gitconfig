@@ -1,0 +1,26 @@
+[core]
+    excludesfile = /Users/keisukeohtani/.gitignore_global
+    editor = vim -c \"set fenc=utf-8\"
+    autocrlf = input
+
+[user]
+	name = keiohtani
+    email = 35276788+keiohtani@users.noreply.github.com
+
+[alias]
+    st = status -sb
+    co = checkout
+    fe = fetch
+    c = commit -m
+    g = grep -i
+    df = diff
+    a = add
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
+[color]
+	ui = true
