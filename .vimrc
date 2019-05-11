@@ -32,13 +32,11 @@ endif
 
 " Required:
 filetype plugin indent on
-syntax enable
 
 " If you want to install not installed plugins on startup.
 "if dein#check_install()
 "  call dein#install()
 "endif
-let g:deoplete#enable_at_startup = 1
 set showcmd
 set number
 set cursorline
@@ -50,6 +48,7 @@ set showmatch
 set tabstop=4
 set shiftwidth=4
 set expandtab
-colorscheme molokai
-syntax on
+syntax enable
+set background=dark
+colorscheme solarized
 set guifont=Menlo:h15
