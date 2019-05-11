@@ -1,1 +1,0 @@
-/Users/ohtanikeisuke/.zprezto/runcoms/zshenv
