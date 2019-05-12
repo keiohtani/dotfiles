@@ -2,6 +2,5 @@
 
 # Install editor
 echo Installing editors
-brew update
 brew install vim
-
+brew install nvim
