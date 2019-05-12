@@ -2,6 +2,7 @@
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
+uname=$(uname)
 if [[ $uname = 'Linux' ]]; then
 	eval "$(ssh-agent -s)"
 	ssh-add ~/.ssh/id_rsa_github
@@ -54,7 +55,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # tmux 
 # https://qiita.com/ssh0/items/a9956a74bff8254a606a
-if [[ $uname = 'Darwin' ]]; then
+if [ $uname = 'Darwin' ]; then
     if [[ ! -n $TMUX ]]; then
       # get the IDs
       ID="`tmux list-sessions`"
@@ -72,6 +73,5 @@ if [[ $uname = 'Darwin' ]]; then
         :  # Start terminal normally
       fi
     fi
-fi
 fi
 
