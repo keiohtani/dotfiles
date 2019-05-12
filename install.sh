@@ -7,12 +7,12 @@ do
         ln -Fis "$HOME/$dotfile" $HOME
     fi
 done
-ln -Fis "$HOME/dotfile/.vim/colors" "$HOME/.config/nvim"
+ln -Fis "$PWD/.vim/colors" "$HOME/.config/nvim"
 
 for nvim_file in nvim/*
 do
     if [ $nvim_file != '..' ]
     then
-        ln -Fis "$HOME/dotfile/nvim/init.vim" "$HOME/.config/nvim"
+        ln -Fis "$PWD/nvim/$nvim_file" "$HOME/.config/nvim"
     fi
 done
