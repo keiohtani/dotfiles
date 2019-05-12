@@ -35,7 +35,7 @@ alias gc='git commit -m'
 alias gdf='git diff'
 alias gpsh='git push'
 alias gco='git checkout'
-# alias vim='nvim'
+alias vim='nvim'
 alias code='open /Applications/Visual\ Studio\ Code.app'
 alias py='python'
 alias jn="jupyter notebook --browser='chrome'"
