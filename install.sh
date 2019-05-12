@@ -4,7 +4,7 @@ for dotfile in .?*
 do
     if [ $dotfile != '..' ] && [ $dotfile != '.git' ]
     then
-        ln -Fis "$HOME/$dotfile" $HOME
+        ln -Fis "$PWD/$dotfile" $HOME
     fi
 done
 ln -Fis "$PWD/.vim/colors" "$HOME/.config/nvim"
