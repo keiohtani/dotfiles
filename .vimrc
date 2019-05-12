@@ -15,7 +15,7 @@ if dein#load_state($HOME . '/.cache/dein')
   call dein#begin($HOME . '/.cache/dein')
 
   " Add or remove your plugins here:
-  let s:toml_dir  = $HOME . '/.config/nvim/'
+  let s:toml_dir  = $HOME . '/dotfiles/nvim/'
   let s:toml      = s:toml_dir . '/dein.toml'
   let s:lazy_toml = s:toml_dir . '/dein_lazy.toml'
   call dein#load_toml(s:toml,{'lazy':0})
