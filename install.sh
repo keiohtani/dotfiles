@@ -13,6 +13,6 @@ for nvim_file in nvim/*
 do
     if [ $nvim_file != '..' ]
     then
-        ln -Fis "$PWD/nvim/$nvim_file" "$HOME/.config/nvim"
+        ln -Fis "$PWD/$nvim_file" "$HOME/.config/nvim"
     fi
 done
