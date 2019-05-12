@@ -43,4 +43,6 @@ set shiftwidth=4
 set expandtab
 colorscheme solarized
 set background=dark
+set termguicolors
 nnoremap :tree :NERDTree
+map <C-t> :NERDTreeToggle<CR>
