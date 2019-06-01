@@ -40,8 +40,8 @@ alias code='open /Applications/Visual\ Studio\ Code.app'
 alias py='python'
 alias jn="jupyter notebook --browser='chrome'"
 alias ec2='sh ~/.ec2.sh'
-alias raspi_NAS='ssh pi@raspinas.local -p 50022'
-alias raspi_camera='ssh pi@raspicamera.local -p 50022'
+alias raspi_NAS='ssh pi@raspinas.local -p 50022 -i ~/.ssh/id_rsa_raspi3b'
+alias raspi_camera='ssh pi@raspicamera.local -p 50022 -i ~/.ssh/id_rsa_raspi3b'
 
 # exports
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
@@ -49,6 +49,7 @@ export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/bin/npm:$PATH"
 export NVM_DIR="$HOME/.nvm"
+export PATH=${PATH}:/usr/loca/mysql/bin/
 
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -76,3 +77,5 @@ if [ $uname = 'Darwin' ]; then
     fi
 fi
 
+export PATH=/usr/local/mysql/bin:$PATH
+export PATH=$PATH:/usr/local/mongodb/bin
