@@ -66,25 +66,25 @@ UNAME=$(uname)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 if [ $UNAME = 'Darwin' ]; then
-    if [[ ! -n $TMUX ]]; then
-      # get the IDs
-      ID="`tmux list-sessions`"
-      if [[ -z "$ID" ]]; then
-        tmux new-session
-		startup
-      fi
+  if [[ ! -n $TMUX ]]; then
+    # get the IDs
+    ID="`tmux list-sessions`"
+    if [[ -z "$ID" ]]; then
+      tmux new-session
+    else 
       create_new_session="Create New Session"
       ID="$ID\n${create_new_session}:"
       ID="`echo $ID | fzf | cut -d: -f1`"
-      if [ "$ID" = "${create_new_session}" ]; then
+      if [[ "$ID" = "${create_new_session}" ]]; then
         tmux new-session
-      elif [ -n "$ID" ]; then
+      elif [[ -n "$ID" ]]; then
         tmux attach-session -t "$ID"
       fi
     fi
+  fi
 fi
 
 # run startup function if terminal is in a tmux session
-if [ -n "$TMUX" ]; then
+if [[ -n "$TMUX" ]]; then
   startup
 fi
