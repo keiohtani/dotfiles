@@ -36,7 +36,6 @@ startup(){
 	alias gpsh='git push'
 	alias gco='git checkout'
 	alias vim='nvim'
-	alias code='open /Applications/Visual\ Studio\ Code.app'
 	alias py='python'
 	alias jn="jupyter notebook --browser='chrome'"
 	alias ec2='sh ~/.ec2.sh'
