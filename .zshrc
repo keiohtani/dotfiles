@@ -1,3 +1,5 @@
+UNAME=$(uname)
+
 startup(){
 	
 	# Source Prezto.
@@ -8,7 +10,7 @@ startup(){
 	if [[ $UNAME = 'Linux' ]]; then
 		eval "$(ssh-agent -s)"
 		ssh-add ~/.ssh/id_rsa_github
-	elif [[ $UNAME = 'Darwin' ]];then
+	elif [[ $UNAME = 'Darwin' ]]; then
 		ssh-add -K ~/.ssh/id_rsa_github
 	fi
 	
@@ -22,11 +24,6 @@ startup(){
 	HISTFILE=~/.zhistory
 	SAVEHIST=1000
 	
-	export PYENV_ROOT="$HOME/.pyenv"
-	export PATH="$PYENV_ROOT/bin:$PATH"
-	if command -v pyenv 1>/dev/null 2>&1; then
-	      eval "$(pyenv init -)"
-	fi
 	
 	# aliases
 	alias gst='git status'
@@ -38,50 +35,66 @@ startup(){
 	alias vim='nvim'
 	alias py='python'
 	alias jn="jupyter notebook --browser='chrome'"
-	alias ec2='sh ~/.ec2.sh'
-	alias raspi_NAS='ssh pi@raspinas.local -p 50022 -i ~/.ssh/id_rsa_raspi3b'
-	alias raspi_camera='ssh pi@raspicamera.local -p 50022 -i ~/.ssh/id_rsa_raspi3b'
-	
-	# exports
-	export PATH="/usr/local/opt/icu4c/bin:$PATH"
-	export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-	export PATH="/usr/local/opt/openssl/bin:$PATH"
-	export PATH="/usr/local/bin/npm:$PATH"
-	export NVM_DIR="$HOME/.nvm"
-	export PATH=${PATH}:/usr/loca/mysql/bin/
-	
-	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-	export PATH=/usr/local/mysql/bin:$PATH
-	export PATH=$PATH:/usr/local/mongodb/bin
-	export PATH=$HOME/local/bin:$PATH
 
+	if [[ $UNAME = 'Darwin' ]]; then
+
+	    export PYENV_ROOT="$HOME/.pyenv"
+    	export PATH="$PYENV_ROOT/bin:$PATH"
+    	if command -v pyenv 1>/dev/null 2>&1; then
+    	   eval "$(pyenv init -)"
+    	fi
+    
+    	alias ec2='sh ~/.ec2.sh'
+    	alias raspi_NAS='ssh pi@raspinas.local -p 50022 -i ~/.ssh/raspi3b'
+    	alias raspi_camera='ssh pi@raspicamera.local -p 50022 -i ~/.ssh/id_rsa_raspi3b'
+    	
+    	# exports
+    	export PATH="/usr/local/opt/icu4c/bin:$PATH"
+    	export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+    	export PATH="/usr/local/opt/openssl/bin:$PATH"
+    	export PATH="/usr/local/bin/npm:$PATH"
+    	export NVM_DIR="$HOME/.nvm"
+    	export PATH=${PATH}:/usr/loca/mysql/bin/
+    	
+    	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+    	export PATH=/usr/local/mysql/bin:$PATH
+    	export PATH=$PATH:/usr/local/mongodb/bin
+    	export PATH=$HOME/local/bin:$PATH
+
+    fi
 }
 
-UNAME=$(uname)
+tmux_setup(){
 
+  # tmux 
+  # https://qiita.com/ssh0/items/a9956a74bff8254a606a
 
-# tmux 
-# https://qiita.com/ssh0/items/a9956a74bff8254a606a
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-if [[ ! -n $TMUX ]]; then
-  # get the IDs
-  ID="`tmux list-sessions`"
-  if [[ -z "$ID" ]]; then
-    tmux new-session
-  else 
-    create_new_session="Create New Session"
-    ID="$ID\n${create_new_session}:"
-    ID="`echo $ID | fzf | cut -d: -f1`"
-    if [[ "$ID" = "${create_new_session}" ]]; then
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+  if [[ ! -n $TMUX ]]; then
+    # get the IDs
+    ID="`tmux list-sessions`"
+    if [[ -z "$ID" ]]; then
       tmux new-session
-    elif [[ -n "$ID" ]]; then
-      tmux attach-session -t "$ID"
+    else 
+      create_new_session="Create New Session"
+      ID="$ID\n${create_new_session}:"
+      ID="`echo $ID | fzf | cut -d: -f1`"
+      if [[ "$ID" = "${create_new_session}" ]]; then
+        tmux new-session
+      elif [[ -n "$ID" ]]; then
+        tmux attach-session -t "$ID"
+      fi
     fi
   fi
-fi
+  
+  # run startup function if terminal is in a tmux session
+  if [[ -n "$TMUX" ]]; then
+    startup
+  fi
+}
 
-# run startup function if terminal is in a tmux session
-if [[ -n "$TMUX" ]]; then
-  startup
+if [[ $UNAME = 'Linux' ]]; then
+    startup
+elif [[ $UNAME = 'Darwin' ]]; then
+    tmux_setup
 fi
