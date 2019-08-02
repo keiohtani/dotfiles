@@ -1,21 +1,35 @@
 #!/bin/zsh
 
-ubuntu_setup(){
-    sudo apt-get install software-properties-common
-    sudo add-apt-repository ppa:neovim-ppa/stable
-    sudo apt-get update
-    sudo apt-get install neovim
-}
+basic_setup(){
 
-raspi_setup(){
-    
-    echo Type the username: 
-    read username
+    username=$(user)
     dependency="zsh git vim tmux uwf"
     echo Installing $dependency
     sudo apt-get install dependency
     chsh -s /bin/zsh $username
-    done
+
+}
+
+ubuntu_setup(){
+    
+    basic_setup
+
+    # install neovim
+    echo Installing neovim
+    sudo apt-get install software-properties-common
+    sudo add-apt-repository ppa:neovim-ppa/stable
+    sudo apt-get update
+    sudo apt-get install neovim
+
+    zsh
+    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+
+}
+
+
+raspi_setup(){
+    
+    basic_setup
     
     # setup firewall using uwf
     
@@ -55,7 +69,8 @@ UNAME=$(uname)
 if [ $UNAME = 'Darwin' ]; then
     brew install nvim
 elif [ $UNAME = 'Linux' ]; then
-    linux_setup
+    # linux_setup
+    ubuntu_setup
 fi
 
 nvim --version  # to test nvim installation
