@@ -1,12 +1,5 @@
 #!/bin/zsh
 
-UNAME = $(uname)
-
-if [ UNAME = 'Darwin' ]; then
-    brew install nvim
-elif [ UNAME = 'Linux' ]; then
-    linux_setup
-fi
 
 linux_setup(){
     
@@ -16,7 +9,7 @@ linux_setup(){
     echo Installing $dependency
     sudo apt-get install dependency
     chsh -s /bin/zsh $username
-    done 
+    done
     
     # setup firewall using uwf
     
@@ -42,13 +35,22 @@ linux_setup(){
     echo Enter network ID for zerotier: 
     read networkID 
     curl -s 'https://raw.githubusercontent.com/zerotier/download.zerotier.com/master/htdocs/contact%40zerotier.com.gpg' | gpg --import && \
-        if z=$(curl -s 'https://install.zerotier.com/' | gpg); then echo "$z" | sudo bash; fi
+        if z=$(curl -s 'https://install.zerotier.com/' | gpg); then echo "$z" | sudo bash fi
     sudo systemctl enable zerotier-one
     sudo zerotier-cli join $networkID
     echo Authenticate your device at https://my.zerotier.com/network/$networkID
     sudo touch /var/lib/zerotier-one/networks.d/${networkID}.conf
 
 }
+
+
+UNAME=$(uname)
+
+if [ $UNAME = 'Darwin' ]; then
+    brew install nvim
+elif [ $UNAME = 'Linux' ]; then
+    linux_setup
+fi
 
 nvim --version  # to test nvim installation
 
