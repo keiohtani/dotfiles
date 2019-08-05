@@ -11,7 +11,7 @@ basic_setup(){
     zsh
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
     source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-    
+
 }
 
 ubuntu_setup(){
@@ -32,6 +32,12 @@ ubuntu_setup(){
     test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
     echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
     brew install hello
+
+    echo Installing yarn...
+    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+    sudo apt update
+    sudo apt install yarn
 
 }
 
