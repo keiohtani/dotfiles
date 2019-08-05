@@ -31,6 +31,10 @@ ubuntu_setup(){
     test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
     test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
     echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
+    # solution to the Homebrew installation error https://github.com/Homebrew/linuxbrew-core/issues/13596
+    sudo apt-get install build-essential
+    sudo apt-get install binutils
+    sudo apt-get install file
     brew install hello
 
     echo Installing yarn...
