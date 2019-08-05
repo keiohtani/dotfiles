@@ -18,7 +18,6 @@ startup(){
 	# https://qiita.com/ktr_type23/items/3eb782f98c7a5f4c60b0
 	# enhancing auto completion
 	autoload -U compinit
-	compinit
 	
 	HISTSIZE=1000
 	HISTFILE=~/.zhistory
