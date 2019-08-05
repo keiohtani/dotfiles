@@ -10,7 +10,8 @@ basic_setup(){
 
     zsh
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-
+    source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+    
 }
 
 ubuntu_setup(){
