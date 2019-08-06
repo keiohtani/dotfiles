@@ -1,5 +1,18 @@
 #!/bin/zsh
 
+node_setup(){
+    
+    echo Installing nvm...
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+    nvm install node
+    nvm install 10 
+    nvm install 8
+
+    echo Installing nodenv
+    brew install nodenv
+    nodenv init
+}
+
 basic_setup(){
 
     dependency="git vim tmux"
