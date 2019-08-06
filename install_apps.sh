@@ -13,7 +13,18 @@ node_setup(){
     nodenv init
 }
 
+wsl_setup(){
+   
+    sudo apt-get install libgtk-3-0 libxss1 libgconf-2-4 libnss3 libasound2
+    sudo apt-get install x11-apps x11-utils x11-xserver-utils fonts-ipafont
+    echo 'export DISPLAY=localhost:0.0' >> ~/.zshrc
+    echo Install X Server
+    
+}
+
 basic_setup(){
+    
+    sudo apt update && sudo apt upgrade && sudo apt-get update && sudo apt-get upgrade
 
     dependency="git vim tmux"
     echo Installing $dependency
