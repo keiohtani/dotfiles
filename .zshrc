@@ -108,6 +108,8 @@ mac_setup(){
     export PATH=$PATH:/usr/local/mongodb/bin
     export PATH=$HOME/local/bin:$PATH
 
+    node_setup
+
 }
 
 if [[ $uname = 'Linux' ]]; then
