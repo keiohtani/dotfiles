@@ -26,6 +26,10 @@ tmux_setup(){
       fi
     fi
   fi
+
+  if [[ -n "$TMUX" ]]; then	
+      mac_setup
+  fi
   
 }
 
@@ -100,7 +104,6 @@ mac_setup(){
     export PATH=$PATH:/usr/local/mongodb/bin
     export PATH=$HOME/local/bin:$PATH
 
-    tmux_setup
 }
 
 standard_setup
@@ -108,6 +111,6 @@ standard_setup
 if [[ $uname = 'Linux' ]]; then
     linux_setup 
 elif [[ $uname = 'Darwin' ]]; then
-    mac_setup
+    tmux_setup
 fi
 
