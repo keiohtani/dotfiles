@@ -32,6 +32,8 @@ startup(){
 	alias gdf='git diff'
 	alias gpsh='git push'
 	alias gco='git checkout'
+    alias gb='git checkout -b'
+    alias gp='git pull'
 	alias vim='nvim'
 	alias py='python'
 	alias jn="jupyter notebook --browser='chrome'"
@@ -43,9 +45,11 @@ startup(){
     	if command -v pyenv 1>/dev/null 2>&1; then
     	   eval "$(pyenv init -)"
     	fi
+        eval "$(nodenv init -)"
     
     	alias ec2='sh ~/.ec2.sh'
     	alias raspi_NAS='ssh pi@raspinas.local -p 50022 -i ~/.ssh/raspi3b'
+    	alias raspi_temp='ssh pi@raspi_temp.local -p 50022 -i ~/.ssh/raspi3b'
     	alias raspi_camera='ssh pi@raspicamera.local -p 50022 -i ~/.ssh/id_rsa_raspi3b'
     	
     	# exports
