@@ -27,11 +27,6 @@ tmux_setup(){
     fi
   fi
   
-  # run startup function if terminal is in a tmux session
-  if [[ -n "$TMUX" ]]; then
-    startup
-  fi
-
 }
 
 standard_setup(){
