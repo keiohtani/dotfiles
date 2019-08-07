@@ -69,6 +69,8 @@ standard_setup(){
 }
 
 linux_setup(){
+
+    standard_setup
     
     # Homebrew path
     export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
@@ -78,6 +80,8 @@ linux_setup(){
 }
 
 mac_setup(){
+
+    standard_setup
 
     alias py='python'
     alias jn="jupyter notebook --browser='chrome'"
@@ -105,8 +109,6 @@ mac_setup(){
     export PATH=$HOME/local/bin:$PATH
 
 }
-
-standard_setup
 
 if [[ $uname = 'Linux' ]]; then
     linux_setup 
