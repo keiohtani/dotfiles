@@ -115,6 +115,7 @@ mac_setup(){
 if [[ $uname = 'Linux' ]]; then
     linux_setup 
 elif [[ $uname = 'Darwin' ]]; then
-    tmux_setup
+    # tmux_setup
+    mac_setup
 fi
 
