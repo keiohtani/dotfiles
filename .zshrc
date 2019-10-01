@@ -88,6 +88,7 @@ mac_setup(){
     alias ec2='sh ~/.ec2.sh'
     alias raspi_NAS='ssh pi@raspinas.local -p 50022 -i ~/.ssh/raspi3b'
     alias raspi_camera='ssh pi@raspicamera.local -p 50022 -i ~/.ssh/id_rsa_raspi3b'
+    alias raspi4_nas='ssh pi@raspi4nas.local -p 50022 -i ~/.ssh/raspi4_nas'
     export PYENV_ROOT="$HOME/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"
 
