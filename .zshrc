@@ -85,6 +85,7 @@ raspi_setup(){
 
 linuxbrew_setup(){
     export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+    eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 }
 
 standard_setup(){
