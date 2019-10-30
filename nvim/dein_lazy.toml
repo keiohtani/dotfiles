@@ -62,9 +62,6 @@ let g:jedi#completions_enabled = 0
 repo = 'mattn/emmet-vim'
 on_i = 1
 
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-
 [[plugins]] # toml syntax
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
