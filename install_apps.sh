@@ -10,7 +10,7 @@ node_install(){
 
 basic_install(){
     
-    sudo apt update && sudo apt upgrade && sudo apt-get update && sudo apt-get upgrade
+    sudo apt -y update && sudo apt -y upgrade && sudo apt-get -y update && sudo apt-get -y upgrade
 
     dependency="zsh git vim tmux"
     echo Installing $dependency
@@ -25,7 +25,7 @@ basic_install(){
 }
 
 neovim_install(){
-    echo Installing neovim
+    echo 'Installing neovim'
     sudo apt-get install software-properties-common
     sudo add-apt-repository ppa:neovim-ppa/stable
     sudo apt-get update
