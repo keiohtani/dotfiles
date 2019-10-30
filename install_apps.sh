@@ -12,24 +12,14 @@ basic_install(){
     
     sudo apt -y update && sudo apt -y upgrade && sudo apt-get -y update && sudo apt-get -y upgrade
 
-    dependency="zsh git vim tmux"
-    echo Installing $dependency
-    sudo apt-get install dependency
-    zsh
-    chsh -s /bin/zsh $USER
+    dependencies="zsh git vim tmux"
+    echo Installing $dependencies
+    sudo apt-get install $dependencies
 
-    zsh
+    chsh -s /bin/zsh $USER
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
     source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
-}
-
-neovim_install(){
-    echo 'Installing neovim'
-    sudo apt-get install software-properties-common
-    sudo add-apt-repository ppa:neovim-ppa/stable
-    sudo apt-get update
-    sudo apt-get install neovim
 }
 
 linuxbrew_install(){
@@ -44,7 +34,7 @@ yarn_install(){
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
     sudo apt remove cmdtest
-    sudo apt install yarn
+    sudo apt -y install yarn
 }
 
 zerotier_install(){
@@ -74,10 +64,11 @@ fzf_install(){
 
 neovim_install_for_pi(){
     
+    echo "Installing neovim..."
     # install nvim
     # https://wilkins.tech/posts/neovim-raspberry-pi/
     echo 'Installing nvim...' 
-    sudo apt-get install cmake automake libtool libtool-bin gettext
+    sudo apt-get -y install cmake automake libtool libtool-bin gettext
     git clone https://github.com/neovim/neovim.git
     cd neovim
     make -j8 CMAKE_BUILD_TYPE=RelWithDebInfo
@@ -91,7 +82,8 @@ neovim_setup(){
     nvim --version  # to test nvim installation
 
     # install plugin manager for NVIM
-    echo 'Installing NVIM plugin manager'
+    echo 'Installing dein plugin manager'
+    cd ~
     curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
     # For example, we just use `~/.cache/dein` as installation directory
     sh ./installer.sh ~/.cache/dein
@@ -105,9 +97,9 @@ neovim_setup(){
 ubuntu_install(){
     
     basic_install
-    neovim_install
     linuxbrew_install
     yarn_install
+    brew install neovim
 
 }
 
@@ -118,7 +110,7 @@ raspi_install(){
     fzf_install
     
     # install firewall using uwf
-    sudo apt-get install uwf
+    sudo apt-get -y install uwf
     
     neovim_install_for_pi
     install_zerotier
