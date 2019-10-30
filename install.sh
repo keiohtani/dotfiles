@@ -8,6 +8,8 @@ do
     fi
 done
 
+mkdir $HOME/.config/nvim
+
 for nvim_file in nvim/*
 do
     if [ $nvim_file != '..' ] && [ $nvim_file != '.' ]

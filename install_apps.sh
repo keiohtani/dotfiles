@@ -34,7 +34,7 @@ yarn_install(){
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
     sudo apt remove cmdtest
-    sudo apt -y install yarn
+    sudo apt install yarn
 }
 
 zerotier_install(){
@@ -68,7 +68,7 @@ neovim_install_for_pi(){
     # install nvim
     # https://wilkins.tech/posts/neovim-raspberry-pi/
     echo 'Installing nvim...' 
-    sudo apt-get -y install cmake automake libtool libtool-bin gettext
+    sudo apt-get install cmake automake libtool libtool-bin gettext
     git clone https://github.com/neovim/neovim.git
     cd neovim
     make -j8 CMAKE_BUILD_TYPE=RelWithDebInfo
@@ -79,13 +79,8 @@ neovim_install_for_pi(){
 
 neovim_setup(){
 
-    nvim --version  # to test nvim installation
-
-    # install plugin manager for NVIM
     echo 'Installing dein plugin manager'
-    cd ~
     curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-    # For example, we just use `~/.cache/dein` as installation directory
     sh ./installer.sh ~/.cache/dein
     rm ./installer.sh
 
@@ -110,7 +105,7 @@ raspi_install(){
     fzf_install
     
     # install firewall using uwf
-    sudo apt-get -y install uwf
+    sudo apt-get install uwf
     
     neovim_install_for_pi
     install_zerotier
