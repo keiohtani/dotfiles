@@ -11,3 +11,12 @@
 "colorScheme": "Solarized Dark",
 "fontSize": 9
 ```
+
+## Chrome Extensions
+- Grammarly
+- Just Read
+- 1Password
+- Pesticide for Chrome
+- React Developer Tools
+- Add to Wunderlist
+- Vimium
