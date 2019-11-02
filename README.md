@@ -20,3 +20,7 @@
 - React Developer Tools
 - Add to Wunderlist
 - Vimium
+
+## Commands
+- Compile .zshrc when the file gets bigger
+`zcompile ~/.zshrc`
