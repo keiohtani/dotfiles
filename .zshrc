@@ -1,4 +1,4 @@
-source .zsh/zsh.zsh
-source .zsh/github.zsh
-source .zsh/alias.zsh
-source .zsh/env.zsh
+source $HOME/.zsh/zsh.zsh
+source $HOME/.zsh/github.zsh
+source $HOME/.zsh/alias.zsh
+source $HOME/.zsh/env.zsh
