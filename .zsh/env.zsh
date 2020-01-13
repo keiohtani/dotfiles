@@ -7,8 +7,16 @@ mac_setup(){
 
 }
 
+raspi_setup(){
+
+    export PATH=$PATH:~/.local/bin
+    
+}
+
 
      
 if [[ $uname = 'Darwin' ]]; then
     mac_setup
+elif [[ $uname = 'Linux' ]]; then
+    raspi_setup
 fi
