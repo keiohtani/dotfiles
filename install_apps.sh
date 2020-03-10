@@ -13,7 +13,15 @@ raspi_install(){
 
 mac_install(){
 
-    brew install nvim
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    brew update
+    brew upgrade
+    brew cask upgrade
+    brew cleanup
+    brew cask cleanup
+    brew doctor
+    brew install nvim visual-studio-code font-ricty-diminished google-chrome tableplus postman BetterTouchTool
+    brew cask install 
     sh .install/node.sh
 
 }
