@@ -13,6 +13,13 @@ raspi_install(){
 
 mac_install(){
 
+    brew_setup
+    sh .install/node.sh
+
+}
+
+brew_setup(){
+
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     brew update
     brew upgrade
@@ -20,12 +27,26 @@ mac_install(){
     brew cleanup
     brew cask cleanup
     brew doctor
-    brew install nvim visual-studio-code font-ricty-diminished google-chrome tableplus postman BetterTouchTool
-    brew cask install 
-    sh .install/node.sh
-
+    brew install nvim 
+    brew cask install visual-studio-code font-ricty-diminished google-chrome tableplus postman BetterTouchTool
+    
+ }
+ 
+ vscode_setup(){
+ 
+    add_vscode_in_path
+    code --install-extension eamodio.gitlens ms-vscode.vscode-typescript-tslint-plugin vscodevim.vim scode-icons-team.vscode-icons
+    
 }
 
+add_vscode_in_path(){
+
+    cat << EOF >> ~/.bash_profile
+    # Add Visual Studio Code (code)
+    export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+    EOF
+    
+}
 
 if [ $uname = 'Darwin' ]; then
     mac_install
