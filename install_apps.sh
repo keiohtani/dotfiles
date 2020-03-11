@@ -12,7 +12,8 @@ raspi_install(){
 }
 
 mac_install(){
-
+    
+    defaults write -g ApplePressAndHoldEnabled -bool false
     brew_setup
     sh .install/node.sh
 
