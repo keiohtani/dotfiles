@@ -24,3 +24,17 @@
 ## Commands
 - Compile .zshrc when the file gets bigger
 `zcompile ~/.zshrc`
+
+## VSCode
+### Export for Mac OS X
+- Go to the dotfiles directory
+- Export settings.json and keybindings.json
+`cp ~/Library/Application\ Support/Code/User/*.json ./vscode/`
+- Export extensions
+`rm -f ./vscode/extensions.txt && code --list-extensions > ./vscode/extensions.txt`
+### Import for Mac OS X
+- Go to the dotfiles directory
+- Place settings.json and keybindings.json in `~/Library/Application Support/Code/User/`
+`cp ./vscode/*.json ~/Library/Application\ Support/Code/User/`
+- Import extensions
+`sh ./vscode/install_vscode_extensions.sh`

@@ -1,0 +1,52 @@
+{
+    "workbench.colorTheme": "Solarized Light",
+    "explorer.confirmDragAndDrop": false,
+    "editor.minimap.enabled": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "python.jediEnabled": false,
+    "terminal.integrated.rendererType": "dom",
+    "window.zoomLevel": 0,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.tabSize": 2,
+    "window.openFilesInNewWindow": "default",
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "python.dataScience.sendSelectionToInteractiveWindow": false,
+    "[python]": {
+        "editor.tabSize": 4
+    },
+    "python.pythonPath": "${workspaceFolder}/bin/python3",
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+    "[json]": {
+        "editor.tabSize": 2
+    },
+    "[sql]": {
+        "editor.tabSize": 4
+    },
+    "git.autofetch": true,
+    "editor.lineNumbers": "relative",
+    "workbench.iconTheme": "vscode-icons",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "editor.formatOnSave": true,
+    "python.formatting.autopep8Args": [
+        "--max-line-length=120"
+    ],
+    "python.formatting.provider": "black",
+    "python.linting.flake8Args": [
+        "--ignore=E501"
+    ],
+    "editor.renderWhitespace": "none"
+}

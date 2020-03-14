@@ -36,8 +36,7 @@ brew_setup(){
  vscode_setup(){
  
     add_vscode_in_path
-    code --install-extension eamodio.gitlens ms-vscode.vscode-typescript-tslint-plugin vscodevim.vim scode-icons-team.vscode-icons
-    
+    sh vscode/install_vscode_extensions.sh 
 }
 
 add_vscode_in_path(){

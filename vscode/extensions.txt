@@ -1,0 +1,13 @@
+DavidAnson.vscode-markdownlint
+donjayamanne.githistory
+dsznajder.es7-react-js-snippets
+dzannotti.vscode-babel-coloring
+eamodio.gitlens
+eriklynd.json-tools
+KevinRose.vsc-python-indent
+mhutchie.git-graph
+ms-python.python
+ms-vscode.vscode-typescript-tslint-plugin
+shd101wyy.markdown-preview-enhanced
+vscode-icons-team.vscode-icons
+vscodevim.vim
