@@ -4,9 +4,9 @@ alias gst='git status'
 alias ga='git add'
 alias gc='git commit -m'
 alias gdf='git diff'
-alias gb='git checkout -b'
 alias gp='git pull'
 alias gpsh='git push'
+alias gco='git checkout'
 
 mac_setup(){
   
