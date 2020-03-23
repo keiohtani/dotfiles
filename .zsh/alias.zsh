@@ -7,6 +7,7 @@ alias gdf='git diff'
 alias gp='git pull'
 alias gpsh='git push'
 alias gco='git checkout'
+alias gb='git branch'
 
 mac_setup(){
   
