@@ -28,7 +28,7 @@ brew_setup(){
     brew cleanup
     brew cask cleanup
     brew doctor
-    brew install nvim 
+    brew install nvim tig
     brew cask install visual-studio-code font-ricty-diminished google-chrome tableplus postman BetterTouchTool
     
  }
