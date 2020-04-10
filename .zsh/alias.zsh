@@ -9,6 +9,7 @@ alias gpsh='git push'
 alias gco='git checkout'
 alias gb='git branch'
 alias gch='git cherry-pick'
+alias gcl='git clone'
 
 mac_setup(){
   
