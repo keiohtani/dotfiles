@@ -1,6 +1,6 @@
 uname=$(uname)
 
-alias gst='git status'
+alias gst='git st -sb'
 alias ga='git add'
 alias gc='git commit -m'
 alias gdf='git diff'
@@ -8,6 +8,7 @@ alias gp='git pull'
 alias gpsh='git push'
 alias gco='git checkout'
 alias gb='git branch'
+alias gch='git cherry-pick'
 
 mac_setup(){
   
