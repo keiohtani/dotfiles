@@ -14,6 +14,6 @@ for nvim_file in nvim/*
 do
     if [ $nvim_file != '..' ] && [ $nvim_file != '.' ]
     then
-        ln -vis $PWD/$nvim_file $HOME/.config/nvim/
+        ln -vis $PWD/$nvim_file $HOME/.config/nvim
     fi
 done
