@@ -16,7 +16,16 @@ mac_install(){
     defaults write -g ApplePressAndHoldEnabled -bool false
     brew_setup
     sh .install/node.sh
+    install_speedtest_for_mac
 
+}
+
+install_speedtest_for_mac(){
+
+    brew tap teamookla/speedtest
+    brew update
+    brew install speedtest --force
+    
 }
 
 brew_setup(){
