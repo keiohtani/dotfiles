@@ -41,6 +41,7 @@ set showmatch
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set spell
 colorscheme solarized
 set background=dark
 nnoremap :tree :NERDTree
