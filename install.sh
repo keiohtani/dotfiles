@@ -17,3 +17,6 @@ do
         ln -vis $PWD/$nvim_file $HOME/.config/nvim
     fi
 done
+
+# create a file for local zsh settings
+touch $HOME/.zshrc_local.zsh
