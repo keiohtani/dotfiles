@@ -16,16 +16,14 @@ mac_install(){
     defaults write -g ApplePressAndHoldEnabled -bool false
     brew_setup
     sh .install/node.sh
-    install_speedtest_for_mac
+    git_secrets_setup
 
 }
 
-install_speedtest_for_mac(){
-
-    brew tap teamookla/speedtest
-    brew update
-    brew install speedtest --force
-    
+git_secrets_setup() {
+   git secrets --register-aws --global
+   git secrets --install ~/.git-templates/git-secrets
+   git config --global init.templatedir '~/.git-templates/git-secrets'
 }
 
 brew_setup(){
@@ -37,8 +35,9 @@ brew_setup(){
     brew cleanup
     brew cask cleanup
     brew doctor
-    brew install nvim tig
-    brew cask install visual-studio-code font-ricty-diminished google-chrome tableplus postman BetterTouchTool
+    brew tap teamookla/speedtest
+    brew install nvim tig speedtest git-secrets
+    brew cask install visual-studio-code font-ricty-diminished google-chrome tableplus postman BetterTouchTool docker
     
  }
  
