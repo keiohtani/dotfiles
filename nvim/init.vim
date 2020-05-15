@@ -31,7 +31,8 @@ endif
 filetype plugin indent on
 syntax enable
 
-set number
+set number relativenumber
+set nu rnu
 set cursorline
 set virtualedit=onemore
 set smartindent
@@ -43,5 +44,4 @@ set shiftwidth=4
 set expandtab
 set spell
 colorscheme solarized
-set background=dark
-nnoremap :tree :NERDTree
+set background=light
