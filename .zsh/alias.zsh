@@ -10,6 +10,7 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gch='git cherry-pick'
 alias gcl='git clone'
+alias gm='git merge'
 
 mac_setup(){
   
