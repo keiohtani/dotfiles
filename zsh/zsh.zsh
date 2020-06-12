@@ -11,3 +11,5 @@ autoload -U compinit
 HISTSIZE=1000
 HISTFILE=~/.zhistory
 SAVEHIST=1000
+
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
