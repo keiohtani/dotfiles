@@ -4,6 +4,8 @@ mac_setup(){
 
     eval "$(pyenv init -)"
     eval "$(nodenv init -)"
+    export VISUAL=nvim
+    export EDITOR="$VISUAL"
 
 }
 
