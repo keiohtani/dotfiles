@@ -38,3 +38,7 @@
 `cp ./vscode/*.json ~/Library/Application\ Support/Code/User/`
 - Import extensions
 `sh ./vscode/install_vscode_extensions.sh`
+
+## Issues
+- [zsh compinit: insecure directories](https://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories)
+`compaudit | xargs chmod g-w`
