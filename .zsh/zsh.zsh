@@ -13,4 +13,3 @@ HISTFILE=~/.zhistory
 SAVEHIST=1000
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#fff,bold,underline"
