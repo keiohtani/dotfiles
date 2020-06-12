@@ -1,36 +1,27 @@
-if &compatible
-  set nocompatible               " Be iMproved
-endif
+" Specify a directory for plugins
+call plug#begin(stdpath('data') . '/plugged')
 
-if (!isdirectory(expand("$HOME/.cache/dein/repos/github.com/Shougo/dein.vim")))
-    call system(expand("mkdir -p $HOME/.cache/dein/repos/github.com"))
-    call system(expand("git clone https://github.com/Shougo/dein.vim $HOME/.cache/dein/repos/github.com/Shougo/dein.vim"))
-endif
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdtree'
+Plug 'tsony-tsonev/nerdtree-git-plugin'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-surround'
+Plug 'ryanoasis/vim-devicons'
+Plug 'kien/ctrlp.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'HerringtonDarkholme/yats.vim'
 
-" Required:
-set runtimepath+=$HOME/.cache/dein/repos/github.com/Shougo/dein.vim
+" Initialize plugin system
+call plug#end()
 
-" Required:
-if dein#load_state($HOME . '/.cache/dein')
-  call dein#begin($HOME . '/.cache/dein')
-
-  " Add or remove your plugins here:
-  let s:toml_dir  = $HOME . '/dotfiles/nvim/'
-  let s:toml      = s:toml_dir . '/dein.toml'
-  let s:lazy_toml = s:toml_dir . '/dein_lazy.toml'
-  call dein#load_toml(s:toml,{'lazy':0})
-  call dein#load_toml(s:lazy_toml,{'lazy':1})
-  " You can specify revision/branch/tag.
-
-  " Required:
-  call dein#end()
-  call dein#save_state()
-endif
-
-" Required:
 filetype plugin indent on
 syntax enable
 
+" Colorschema
+colorscheme solarized
+
+" Settings
 set number relativenumber
 set nu rnu
 set cursorline
@@ -43,5 +34,95 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set spell
-colorscheme solarized
 set background=light
+set scrolloff=5
+set sidescrolloff=6
+set splitbelow
+set splitright
+
+" Keymapping
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+inoremap <silent> jj <ESC>
+
+" coc config
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-pairs',
+  \ 'coc-tsserver',
+  \ 'coc-eslint', 
+  \ 'coc-prettier', 
+  \ 'coc-json', 
+  \ ]
+
+" open NERDTree with ctrl + n
+nmap <C-n> :NERDTreeToggle<CR>
+
+" open NERDTree automatically
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree
+
+let g:NERDTreeGitStatusWithFlags = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:NERDTreeGitStatusNodeColorization = 1
+let g:NERDTreeColorMapCustom = {
+    \ "Staged"    : "#0ee375",  
+    \ "Modified"  : "#d9bf91",  
+    \ "Renamed"   : "#51C9FC",  
+    \ "Untracked" : "#FCE77C",  
+    \ "Unmerged"  : "#FC51E6",  
+    \ "Dirty"     : "#FFBD61",  
+    \ "Clean"     : "#87939A",   
+    \ "Ignored"   : "#808080"   
+    \ }              
+
+let g:NERDTreeIgnore = ['^node_modules$']
+
+" j/k will move virtual lines (lines that wrap)
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
+" sync open file with NERDTree
+" " Check if NERDTree is open or active
+function! IsNERDTreeOpen()        
+  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+endfunction
+
+" Call NERDTreeFind if NERDTree is active, current window contains a modifiable
+" file, and we're not in vimdiff
+function! SyncTree()
+  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
+    NERDTreeFind
+    wincmd p
+  endif
+endfunction
+
+" Highlight currently open buffer in NERDTree
+autocmd BufEnter * call SyncTree()
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gt <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Remap for rename current word
+nmap <F2> <Plug>(coc-rename)
+
+" ctrlp
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
