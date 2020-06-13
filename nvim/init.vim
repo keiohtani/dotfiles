@@ -15,8 +15,10 @@ Plug 'itchyny/lightline.vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'christoomey/vim-system-copy'
+Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-function'
 
 " Initialize plugin system
 call plug#end()
@@ -58,6 +60,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 inoremap <silent> jj <ESC>
 nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
 nnoremap <leader>c :sp ~/dotfiles/vim_cheat_sheet.md<CR>
 
 " coc config

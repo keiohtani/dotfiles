@@ -30,6 +30,16 @@
 - open cheatsheet
 <leader>c
 
+# custom textobj
+- function
+`af`, `if`, `aF`, `iF`
+
+- indent
+`ai`, `ii`, `aI`, `iI`
+
+- line
+`al`, `il`, `aL`, `iL`
+
 # vim-system-copy
 `cp<motion>`
 
@@ -49,11 +59,17 @@
 - unstage
 `u`
 
+- difftoal
+`dv`
+
 - commit
 `:Gcommit`
 
 - push
 `:Gpush`
+
+- jump to next/previou funks
+`]c` `[c`
 
 # NERDTree
 - move up the directory
