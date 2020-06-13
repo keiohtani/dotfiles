@@ -13,6 +13,10 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'kien/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'christoomey/vim-system-copy'
+Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-line'
 
 " Initialize plugin system
 call plug#end()
@@ -20,7 +24,7 @@ call plug#end()
 filetype plugin indent on
 syntax enable
 
-" Colorschema
+" Colorscheme
 colorscheme solarized
 
 " Settings
@@ -31,6 +35,9 @@ set virtualedit=onemore
 set smartindent
 set autoindent
 set visualbell
+set noerrorbells
+set smartcase
+set incsearch
 set showmatch
 set tabstop=4
 set shiftwidth=4
@@ -41,13 +48,17 @@ set scrolloff=5
 set sidescrolloff=6
 set splitbelow
 set splitright
+set formatoptions-=cro
 
 " Keymapping
+let mapleader = " "
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 inoremap <silent> jj <ESC>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>c :sp ~/dotfiles/vim_cheat_sheet.md<CR>
 
 " coc config
 let g:coc_global_extensions = [
@@ -66,6 +77,8 @@ nmap <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NERDTree
 
+
+let NERDTreeMinimalUI=1
 let g:NERDTreeGitStatusWithFlags = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:NERDTreeGitStatusNodeColorization = 1
@@ -81,6 +94,9 @@ let g:NERDTreeColorMapCustom = {
     \ }              
 
 let g:NERDTreeIgnore = ['^node_modules$']
+
+" close vim if nerdtree is last and only buffer
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
