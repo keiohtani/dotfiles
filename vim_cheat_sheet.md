@@ -1,4 +1,16 @@
+## vim buffer
+`:enew` `:new` `:vnew`
+
 # vim default
+- move current line to the middle of the screen
+`zz`
+
+- move current line to the top of the screen
+`zt`
+
+- move current line to the bottom of the screen
+`zb`
+
 - repeat find next character
 `;` forward
 `,` backward
@@ -14,6 +26,18 @@
 
 - go forward in locations
 `<C-i>`
+
+- change to lowercase
+`gu`
+
+- change to uppercase
+`gU`
+
+- cycle through
+`:jumps`
+
+- jump to the link
+`<C-]>`
 
 # vim window
 - Horizontal split
@@ -82,10 +106,18 @@
 `go`
 `gi` for split window
 
+# ctrlp
+- open a selected file in vsplit
+`<C-v>`
+- open a selected file in split
+`<C-s>`
 
 # coc
 - goto definition
-`gt`
+`gf`
+
+- goto implementation
+`gi`
 
 # tcomment_vim
 - toggle comment

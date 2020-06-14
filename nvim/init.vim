@@ -44,7 +44,7 @@ set showmatch
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set spell
+" set spell
 set background=light
 set scrolloff=5
 set sidescrolloff=6
@@ -58,10 +58,15 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-inoremap <silent> jj <ESC>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>c :sp ~/dotfiles/vim_cheat_sheet.md<CR>
+nnoremap <leader>s :sp ~/dotfiles/nvim/init.vim<CR>
+nnoremap <leader>t :10new term://zsh<CR>
+
+inoremap <silent> jj <ESC>
+
+tnoremap <silent> jj <C-\><C-n>
 
 " coc config
 let g:coc_global_extensions = [
