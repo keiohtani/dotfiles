@@ -24,3 +24,5 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
+bindkey -M viins '^R'  history-incremental-pattern-search-backward
+bindkey -M viins '^E'  autosuggest-accept
