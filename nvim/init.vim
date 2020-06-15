@@ -1,12 +1,8 @@
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
 " Specify a directory for plugins
 call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'junegunn/vim-plug'
+Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-sensible'
@@ -36,9 +32,11 @@ filetype plugin indent on
 syntax enable
 
 " Colorscheme
+" set background = "dark"
 colorscheme solarized
 
 " Settings
+set mouse=a
 set number relativenumber
 set nu rnu
 set cursorline
