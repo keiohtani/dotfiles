@@ -83,13 +83,16 @@ nnoremap <C-f> :Files!<CR>
 let g:plug_window='vertical belowright new'
 
 " coc config
+" Use <cr> to confirm completion
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
 let g:coc_global_extensions = [
-  \ 'coc-snippets',
   \ 'coc-pairs',
   \ 'coc-tsserver',
   \ 'coc-eslint', 
   \ 'coc-prettier', 
   \ 'coc-json', 
+  \ 'coc-python', 
   \ ]
 
 " open NERDTree with ctrl + n
