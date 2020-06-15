@@ -86,6 +86,9 @@
 - difftoal
 `dv`
 
+- drop in difftool
+`dp`
+
 - commit
 `:Gcommit`
 

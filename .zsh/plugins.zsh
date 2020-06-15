@@ -28,4 +28,5 @@ zinit light zdharma/fast-syntax-highlighting
 zinit load zdharma/history-search-multi-word
 
 # MyPlugins
-zinit light marlonrichert/zsh-autocomplete
+## fzf
+export FZF_DEFAULT_COMMAND='fd --hidden --exclude .git -g ""'

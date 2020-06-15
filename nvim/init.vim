@@ -1,16 +1,24 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 " Specify a directory for plugins
 call plug#begin(stdpath('data') . '/plugged')
 
+Plug 'junegunn/vim-plug'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-sensible'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 Plug 'tsony-tsonev/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-surround'
 Plug 'ryanoasis/vim-devicons'
-Plug 'kien/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'vim-scripts/ReplaceWithRegister'
@@ -19,6 +27,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-function'
+Plug 'machakann/vim-highlightedyank'
 
 " Initialize plugin system
 call plug#end()
@@ -68,6 +77,13 @@ inoremap <silent> jj <ESC>
 
 tnoremap <silent> jj <C-\><C-n>
 
+"================= Plugins =====================
+" fzf.vim
+nnoremap <C-f> :Files!<CR>
+
+" vim-plug config
+let g:plug_window='vertical belowright new'
+
 " coc config
 let g:coc_global_extensions = [
   \ 'coc-snippets',
@@ -80,11 +96,6 @@ let g:coc_global_extensions = [
 
 " open NERDTree with ctrl + n
 nmap <C-n> :NERDTreeToggle<CR>
-
-" open NERDTree automatically
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree
-
 
 let NERDTreeMinimalUI=1
 let g:NERDTreeGitStatusWithFlags = 1
@@ -110,23 +121,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
-" sync open file with NERDTree
-" " Check if NERDTree is open or active
-function! IsNERDTreeOpen()        
-  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-endfunction
-
-" Call NERDTreeFind if NERDTree is active, current window contains a modifiable
-" file, and we're not in vimdiff
-function! SyncTree()
-  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-    NERDTreeFind
-    wincmd p
-  endif
-endfunction
-
-" Highlight currently open buffer in NERDTree
-autocmd BufEnter * call SyncTree()
+if has('autocmd')
+    augroup KeiNERDTree
+        autocmd!
+        autocmd User NERDTreeInit call autocmds#attempt_select_last_file()
+    augroup END
+endif
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gt <Plug>(coc-type-definition)
