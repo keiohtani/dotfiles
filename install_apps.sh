@@ -36,8 +36,8 @@ brew_setup(){
     brew cask cleanup
     brew doctor
     brew tap teamookla/speedtest
-    brew install nvim tig speedtest git-secrets
-    brew cask install visual-studio-code font-ricty-diminished google-chrome tableplus postman BetterTouchTool docker
+    brew install nvim tig speedtest git-secrets fzf fd ripgrep
+    brew cask install visual-studio-code font-ricty-diminished google-chrome tableplus postman BetterTouchTool docker karabiner-elements
     
  }
  
