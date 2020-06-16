@@ -37,7 +37,7 @@ brew_setup(){
     brew doctor
     brew tap teamookla/speedtest
     brew install nvim tig speedtest git-secrets fzf fd ripgrep
-    brew cask install visual-studio-code font-ricty-diminished google-chrome tableplus postman BetterTouchTool docker karabiner-elements
+    brew cask install visual-studio-code google-chrome tableplus postman BetterTouchTool docker karabiner-elements
     
  }
  
@@ -45,15 +45,6 @@ brew_setup(){
  
     add_vscode_in_path
     sh vscode/install_vscode_extensions.sh 
-}
-
-add_vscode_in_path(){
-
-    cat << EOF >> ~/.bash_profile
-    # Add Visual Studio Code (code)
-    export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-    EOF
-    
 }
 
 if [ $uname = 'Darwin' ]; then
