@@ -69,7 +69,7 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>c :sp ~/dotfiles/vim_cheat_sheet.md<CR>
 nnoremap <leader>s :sp ~/dotfiles/nvim/init.vim<CR>
-nnoremap <leader>t :10new term://zsh<CR>
+nnoremap <leader>t :15new term://zsh<CR>
 
 inoremap <silent> jj <ESC>
 
@@ -94,6 +94,24 @@ let g:coc_global_extensions = [
   \ 'coc-json', 
   \ 'coc-python', 
   \ ]
+
+" NERDTree
+" Check if NERDTree is open or active
+function! IsNERDTreeOpen()
+  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+endfunction
+
+" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
+" file, and we're not in vimdiff
+function! SyncTree()
+  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
+    NERDTreeFind
+    wincmd p
+  endif
+endfunction
+
+" Highlight currently open buffer in NERDTree
+autocmd BufRead * call SyncTree()
 
 " open NERDTree with ctrl + n
 nmap <C-n> :NERDTreeToggle<CR>
@@ -121,13 +139,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
-
-if has('autocmd')
-    augroup KeiNERDTree
-        autocmd!
-        autocmd User NERDTreeInit call autocmds#attempt_select_last_file()
-    augroup END
-endif
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gt <Plug>(coc-type-definition)
