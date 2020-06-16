@@ -10,9 +10,10 @@ source $HOME/.zshrc_local.zsh
 
 # vi mode
 bindkey -v
-bindkey -M viins 'jj' vi-cmd-mode
+
 export KEYTIMEOUT=25
 
+precmd() { RPROMPT="" }
 function zle-line-init zle-keymap-select {
     VIM_NORMAL="%K{208}%F{black}%k%f%K{208}%F{white} % NORMAL %k%f%K{black}%F{208}%k%f"
     VIM_INSERT="%K{075}%F{black}%k%f%K{075}%F{white} % INSERT %k%f%K{black}%F{075}%k%f"
@@ -24,5 +25,12 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
+# insert mode
 bindkey -M viins '^R'  history-incremental-pattern-search-backward
 bindkey -M viins '^E'  autosuggest-accept
+bindkey -M viins 'jj' vi-cmd-mode
+
+# command mode
+bindkey -M vicmd '?' history-incremental-search-backward
+bindkey -M vicmd '/' history-incremental-search-forward
+bindkey -M vicmd '^B' send-prefix
