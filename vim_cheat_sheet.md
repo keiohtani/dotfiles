@@ -65,7 +65,12 @@
 `al`, `il`, `aL`, `iL`
 
 # vim-system-copy
+- basic
 `cp<motion>`
+- line copy
+`cP`
+- paste
+`cv`
 
 # ReplaceWithRegister
 `gr<motion>`
