@@ -79,7 +79,8 @@ tnoremap <silent> jj <C-\><C-n>
 
 "================= Plugins =====================
 " fzf.vim
-nnoremap <C-f> :Files!<CR>
+nnoremap <C-f> :Files<CR>
+nnoremap <C-s> :Rg<CR>
 
 " vim-plug config
 let g:plug_window='vertical belowright new'
@@ -176,6 +177,4 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
-" ctrlp
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
