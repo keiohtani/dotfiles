@@ -2,19 +2,17 @@
 cd $(dirname $0)
 for dotfile in .?*
 do
-    if [ $dotfile != '..' ] && [ $dotfile != '.git' ] && [ $dotfile != 'install' ]
+    if [[ -f $dotfile ]]
     then
         ln -vis $PWD/$dotfile $HOME
     fi
 done
 
-mkdir $HOME/.config/nvim
-
-for nvim_file in nvim/*
+for config_dir in .config/*
 do
-    if [ $nvim_file != '..' ] && [ $nvim_file != '.' ]
+    if [ $config_dir != '..' ] && [ $config_dir != '.' ]
     then
-        ln -vis $PWD/$nvim_file $HOME/.config/nvim
+        ln -vis $PWD/$config_dir/* $HOME/$config_dir
     fi
 done
 
