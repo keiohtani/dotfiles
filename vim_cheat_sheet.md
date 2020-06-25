@@ -1,16 +1,23 @@
 ## vim buffer
 `:enew` `:new` `:vnew`
 
-# Vim X completion mode
+# vim X completion mode
 - tag 
 `<C-x><C-]>`
 - filename
 `<C-x><C-f>`
-- context-aware word completion
+- context-aware word
 `<C-x><C-p>`
-- line completion
+- line
 `<C-x><C-l>`
+- omni
+`<C-x><C-o>`
 
+# vim dictionary
+- add word under the cursor as a good word
+`zg` or `zug`
+- add word under the cursor as a bad word
+`zw` or `zuw`
 # vim default
 - move current line to the middle of the screen
 `zz`
