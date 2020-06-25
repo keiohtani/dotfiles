@@ -24,6 +24,7 @@ Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-function'
 Plug 'machakann/vim-highlightedyank'
+Plug 'dkarter/bullets.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -70,7 +71,7 @@ nnoremap <C-l> <C-w>l
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>c :sp ~/dotfiles/vim_cheat_sheet.md<CR>
-nnoremap <leader>s :sp ~/dotfiles/nvim/init.vim<CR>
+nnoremap <leader>s :sp ~/dotfiles/.config/nvim/init.vim<CR>
 nnoremap <leader>t :15new term://zsh<CR>
 
 inoremap <silent> jj <ESC>

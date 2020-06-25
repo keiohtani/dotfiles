@@ -1,6 +1,16 @@
 ## vim buffer
 `:enew` `:new` `:vnew`
 
+# Vim X completion mode
+- tag 
+`<C-x><C-]>`
+- filename
+`<C-x><C-f>`
+- context-aware word completion
+`<C-x><C-p>`
+- line completion
+`<C-x><C-l>`
+
 # vim default
 - move current line to the middle of the screen
 `zz`
@@ -53,6 +63,14 @@
 # Custom
 - open cheatsheet
 <leader>c
+
+# Bullets.vim
+- indent
+`>>`
+`<C-t>`
+- dedent
+`<<`
+`<C-d>`
 
 # custom textobj
 - function
