@@ -71,6 +71,12 @@
 - open cheatsheet
 <leader>c
 
+# fzf.vim
+- open in a split
+`<C-x>`
+- open in a vsplit
+`<C-v>`
+
 # Bullets.vim
 - indent
 `>>`
