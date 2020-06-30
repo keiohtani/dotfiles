@@ -2,6 +2,7 @@
 call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'junegunn/vim-plug'
+Plug 'skywind3000/asyncrun.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -79,12 +80,20 @@ inoremap <silent> jj <ESC>
 tnoremap <silent> jj <C-\><C-n>
 
 "================= Plugins =====================
+" asyncrun.vim
+" for fugitive
+command! -bang -nargs=* -complete=file Make AsyncRun -program=make @ <args>
+
 " fzf.vim
 nnoremap <C-f> :Files<CR>
 nnoremap <C-s> :Rg<CR>
 
 " vim-plug config
 let g:plug_window='vertical belowright new'
+
+" fugitive
+cnoreabbrev gc Gcommit
+cnoreabbrev gpsh Gpush
 
 " coc config
 "
@@ -220,10 +229,6 @@ let g:NERDTreeColorMapCustom = {
     \ "Clean"     : "#87939A",   
     \ "Ignored"   : "#808080"   
     \ }              
-
-" I open a NERDTree automatically when vim starts up if no files were specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 let g:NERDTreeIgnore = ['^node_modules$']
 
