@@ -1,13 +1,13 @@
-# vim
+# ---------- vim ------------
 - replace
 `:%s/Search-Word/Replace-Word/g`
 
-## vim buffer
+## buffer
 `:enew` `:new` `:vnew`
 - go file
 `gf`
 
-# vim X completion mode
+## X completion mode
 - tag 
 `<C-x><C-]>`
 - filename
@@ -19,12 +19,12 @@
 - omni
 `<C-x><C-o>`
 
-# vim dictionary
+## dictionary
 - add word under the cursor as a good word
 `zg` or `zug`
 - add word under the cursor as a bad word
 `zw` or `zuw`
-# vim default
+## default
 - move current line to the middle of the screen
 `zz`
 
@@ -62,7 +62,10 @@
 - jump to the link
 `<C-]>`
 
-# vim window
+- search word under the cursor
+`*`
+
+## window
 - Horizontal split
 `:sp`
 
@@ -73,17 +76,25 @@
 `number <C-w> -/+` or `:res +/-number` vertical
 `number <C-w> >/<` or `:vertical res +/-number` horizontal
 
-# Custom
+## netrw
+- Create new file in the file explore
+`%`
+
+- Rename a file
+`R`
+
+# -------- Custom ---------
 - open cheatsheet
 <leader>c
 
-# fzf.vim
+# -------- Plugins --------
+## fzf.vim
 - open in a split
 `<C-x>`
 - open in a vsplit
 `<C-v>`
 
-# Bullets.vim
+## Bullets.vim
 - indent
 `>>`
 `<C-t>`
@@ -91,7 +102,7 @@
 `<<`
 `<C-d>`
 
-# custom textobj
+## custom textobj
 - function
 `af`, `if`, `aF`, `iF`
 
@@ -101,7 +112,7 @@
 - line
 `al`, `il`, `aL`, `iL`
 
-# vim-system-copy
+## vim-system-copy
 - basic
 `cp<motion>`
 - line copy
@@ -109,13 +120,13 @@
 - paste
 `cv`
 
-# ReplaceWithRegister
+## ReplaceWithRegister
 `gr<motion>`
 
-# vim surround
+## vim surround
 `<operation>s<tag>` - ex `ds"`
 
-# fugitive
+## fugitive
 - git status
 `:G`
 
@@ -140,7 +151,7 @@
 - jump to next/previou funks
 `]c` `[c`
 
-# NERDTree
+## NERDTree
 - move up the directory
 `u` or `U`
 
@@ -151,27 +162,19 @@
 `go`
 `gi` for split window
 
-# ctrlp
+## ctrlp
 - open a selected file in vsplit
 `<C-v>`
 - open a selected file in split
 `<C-s>`
 
-# coc
+## coc
 - goto definition
 `gf`
 
 - goto implementation
 `gi`
 
-# tcomment_vim
+## tcomment_vim
 - toggle comment
 `gc{motion}`
-
-
-# netrw
-- Create new file in the file explore
-`%`
-
-- Rename a file
-`R`
