@@ -134,9 +134,16 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-nnoremap <leader>d :CocDiagnostics <CR>
+xmap <leader>a  <Plug>(coc-codeaction-selected) <cr>
+nmap <leader>a  <Plug>(coc-codeaction-selected) <cr>
+
+" Mappings for CoCList
+" Show all diagnostics.
+nnoremap <leader>d :CocList diagnostics<CR>
+" Do default action for next item.
+nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
+" Do default action for previous item.
+nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.

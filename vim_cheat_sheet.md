@@ -1,5 +1,11 @@
+# vim
+- replace
+`:%s/Search-Word/Replace-Word/g`
+
 ## vim buffer
 `:enew` `:new` `:vnew`
+- go file
+`gf`
 
 # vim X completion mode
 - tag 
