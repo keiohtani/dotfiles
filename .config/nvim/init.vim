@@ -45,8 +45,6 @@ set cursorline
 set virtualedit=onemore
 set smartindent
 set autoindent
-set visualbell
-set noerrorbells
 set ignorecase
 set smartcase
 set incsearch
@@ -62,6 +60,20 @@ set sidescrolloff=6
 set splitbelow
 set splitright
 set formatoptions-=cro
+" Don't redraw while executing macros (good performance config)
+set lazyredraw
+" For regular expressions turn magic on
+set magic
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+" Turn backup off, since most stuff is in SVN, git etc. anyway...
+set nobackup
+set nowb
+set noswapfile
+
 
 " Keymapping
 let mapleader = " "
@@ -71,13 +83,21 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
-nnoremap <leader>c :sp ~/dotfiles/vim_cheat_sheet.md<CR>
-nnoremap <leader>s :sp ~/dotfiles/.config/nvim/init.vim<CR>
 nnoremap <leader>t :15new term://zsh<CR>
 
-inoremap <silent> jj <ESC>
+" LocalLeader
+let maplocalleader = ','
+nnoremap <LocalLeader>c :sp ~/dotfiles/vim_cheat_sheet.md<CR>
+nnoremap <LocalLeader>s :sp ~/dotfiles/.config/nvim/init.vim<CR>
 
+inoremap <silent> jj <ESC>
 tnoremap <silent> jj <C-\><C-n>
+
+nmap <Tab> :bnext<CR>
+nmap <S-Tab> :bprevious<CR>
+
+" autocmd
+autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 "================= Plugins =====================
 " asyncrun.vim
@@ -86,7 +106,7 @@ command! -bang -nargs=* -complete=file Make AsyncRun -program=make @ <args>
 
 " fzf.vim
 nnoremap <C-f> :Files<CR>
-nnoremap <C-s> :Rg<CR>
+nnoremap <C-/> :Rg<CR>
 
 " vim-plug config
 let g:plug_window='vertical belowright new'
@@ -96,8 +116,6 @@ cnoreabbrev gc Gcommit
 cnoreabbrev gpsh Gpush
 
 " coc config
-"
-"
 " TextEdit might fail if hidden is not set.
 set hidden
 
