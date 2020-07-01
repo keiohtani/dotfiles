@@ -43,8 +43,8 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected) <cr>
-nmap <leader>a  <Plug>(coc-codeaction-selected) <cr>
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Mappings for CoCList
 " Show all diagnostics.

@@ -10,5 +10,6 @@
     "python"
   ],
   "coc.source.word.filetypes": ["markdown"],
-  "coc.source.word.priority": 1
+  "coc.source.word.priority": 1,
+  "cSpell.enabled": false
 }
