@@ -25,7 +25,8 @@ Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-function'
 Plug 'machakann/vim-highlightedyank'
-Plug 'dkarter/bullets.vim'
+Plug 'dkarter/bullets.vim', { 'for': 'markdown'}
+Plug 'tpope/vim-eunuch'
 
 " Initialize plugin system
 call plug#end()
