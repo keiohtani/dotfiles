@@ -1,7 +1,7 @@
 " Specify a directory for plugins
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'junegunn/vim-plug'
+Plug 'junegunn/vim-plug', { 'on': 'NERDTreeToggle' }
 Plug 'skywind3000/asyncrun.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
