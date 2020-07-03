@@ -15,9 +15,20 @@ nnoremap <LocalLeader>s :sp ~/dotfiles/.config/nvim/config/<CR>
 
 inoremap <silent> jj <ESC>
 tnoremap <silent> jj <C-\><C-n>
+cnoremap <silent> jj <C-c>
 
-nmap <Tab> :bnext<CR>
-nmap <S-Tab> :bprevious<CR>
+" Quick command mode
+nnoremap <CR> :
+autocmd CmdwinEnter * nnoremap <CR> <CR>
+autocmd BufReadPost quickfix nnoremap <CR> <CR>
+
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+" nnoremap <silent> <Leader>bp :bprevious<CR>
+" nnoremap <silent> <Leader>bn :bnext<CR> nnoremap <silent> <Leader>bf :bfirst<CR>
+" nnoremap <silent> <Leader>bl :blast<CR>
+" nnoremap <silent> <Leader>bd :bd<CR>
+" nnoremap <silent> <Leader>bk :bw<CR>
 
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
