@@ -3,6 +3,7 @@ source $HOME/.zsh/zsh.zsh
 source $HOME/.zsh/plugins.zsh
 source $HOME/.zsh/alias.zsh
 source $HOME/.zshrc_local.zsh
+source $HOME/.zsh/tmux.zsh
 
 # include these lines in ~/.zshrc_local.zsh if needed
 # source $HOME/.zsh/github.zsh
@@ -33,4 +34,3 @@ bindkey -M viins 'jj' vi-cmd-mode
 # command mode
 bindkey -M vicmd '?' history-incremental-search-backward
 bindkey -M vicmd '/' history-incremental-search-forward
-bindkey -M vicmd '^B' send-prefix
