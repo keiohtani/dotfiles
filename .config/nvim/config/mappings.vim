@@ -4,6 +4,8 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+nnoremap <leader>o :only<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>t :15new term://zsh<CR>
@@ -22,8 +24,8 @@ nnoremap <CR> :
 autocmd CmdwinEnter * nnoremap <CR> <CR>
 autocmd BufReadPost quickfix nnoremap <CR> <CR>
 
-nnoremap <Tab> :bnext<CR>
-nnoremap <S-Tab> :bprevious<CR>
+" nnoremap <Tab> :bnext<CR>
+" nnoremap <S-Tab> :bprevious<CR>
 " nnoremap <silent> <Leader>bp :bprevious<CR>
 " nnoremap <silent> <Leader>bn :bnext<CR> nnoremap <silent> <Leader>bf :bfirst<CR>
 " nnoremap <silent> <Leader>bl :blast<CR>
