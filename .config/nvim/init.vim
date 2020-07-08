@@ -1,1 +1,1 @@
-runtime! config/**/*.vim
+runtime! config/*.vim

@@ -9,14 +9,14 @@ Plug 'dkarter/bullets.vim', { 'for': 'markdown'}
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/vim-plug', { 'on': 'NERDTreeToggle' }
+Plug 'junegunn/vim-plug'
 Plug 'kana/vim-textobj-function'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 Plug 'machakann/vim-highlightedyank'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'preservim/nerdtree'
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -33,3 +33,5 @@ call plug#end()
 
 filetype plugin indent on
 syntax enable
+
+runtime! config/plugins/*.vim
