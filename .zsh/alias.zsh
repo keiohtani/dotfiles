@@ -8,7 +8,7 @@ alias gp='git pull'
 alias gpsh='git push'
 alias gco='git checkout'
 alias gb='git branch'
-alias gch='git cherry-pick'
+alias gcp='git cherry-pick'
 alias gcl='git clone'
 alias gm='git merge'
 
