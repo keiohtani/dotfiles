@@ -36,7 +36,7 @@ brew_setup(){
     brew cask cleanup
     brew doctor
     brew tap teamookla/speedtest
-    brew install nvim tig speedtest git-secrets fzf fd ripgrep
+    brew install nvim tig speedtest git-secrets fzf fd ripgrep vifm
     brew cask install visual-studio-code google-chrome tableplus postman BetterTouchTool docker karabiner-elements
     
  }
