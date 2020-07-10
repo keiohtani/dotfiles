@@ -33,3 +33,4 @@ set tm=500
 set nobackup
 set nowb
 set noswapfile
+set cmdheight=1
