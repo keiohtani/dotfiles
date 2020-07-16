@@ -10,6 +10,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-plug'
+Plug 'justinmk/vim-dirvish'
+Plug 'justinmk/vim-sneak'
 Plug 'kana/vim-textobj-function'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
@@ -28,7 +30,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tsony-tsonev/nerdtree-git-plugin'
 Plug 'vim-scripts/ReplaceWithRegister'
-
 " Initialize plugin system
 call plug#end()
 
