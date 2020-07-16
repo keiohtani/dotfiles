@@ -34,3 +34,4 @@ set nobackup
 set nowb
 set noswapfile
 set cmdheight=1
+set autoread
