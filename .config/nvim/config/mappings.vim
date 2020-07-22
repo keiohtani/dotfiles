@@ -24,10 +24,14 @@ nnoremap <CR> :
 autocmd CmdwinEnter * nnoremap <CR> <CR>
 autocmd BufReadPost quickfix nnoremap <CR> <CR>
 
-" nnoremap <Tab> :bnext<CR>
-" nnoremap <S-Tab> :bprevious<CR>
+nnoremap <F6> <C-i>
+nnoremap <F5> <C-o>
+
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
 " nnoremap <silent> <Leader>bp :bprevious<CR>
-" nnoremap <silent> <Leader>bn :bnext<CR> nnoremap <silent> <Leader>bf :bfirst<CR>
+" nnoremap <silent> <Leader>bn :bnext<CR> 
+" nnoremap <silent> <Leader>bf :bfirst<CR>
 " nnoremap <silent> <Leader>bl :blast<CR>
 " nnoremap <silent> <Leader>bd :bd<CR>
 " nnoremap <silent> <Leader>bk :bw<CR>
