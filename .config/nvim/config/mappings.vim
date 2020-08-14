@@ -1,25 +1,7 @@
-" Global Leader
-let mapleader = " "
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
-nnoremap <leader>o :only<CR>
-nnoremap <leader>w :w<CR>
-nnoremap <leader>q :q<CR>
-nnoremap <leader>t :15new term://zsh<CR>
-
-" LocalLeader
-let maplocalleader = ','
-nnoremap <LocalLeader>c :sp ~/dotfiles/vim_cheat_sheet.md<CR>
-nnoremap <LocalLeader>s :sp ~/dotfiles/.config/nvim/config/<CR>
-
 inoremap <silent> jj <ESC>
 tnoremap <silent> jj <C-\><C-n>
 cnoremap <silent> jj <C-c>
 
-" Quick command mode
 nnoremap <CR> :
 autocmd CmdwinEnter * nnoremap <CR> <CR>
 autocmd BufReadPost quickfix nnoremap <CR> <CR>
