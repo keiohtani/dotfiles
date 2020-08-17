@@ -4,6 +4,9 @@ cnoreabbrev gc Gcommit
 cnoreabbrev gpsh Gpush
 cnoreabbrev gco Git checkout
 cnoreabbrev gp Git pull
-nnoremap <leader>gs :G<CR>
+
+" leader
+nnoremap <leader>g :G<CR>
+nnoremap <leader>b :Gblame<CR>
 nnoremap <leader>h :diffget //2<CR>
 nnoremap <leader>l :diffget //2<CR>
