@@ -88,6 +88,12 @@
 <leader>c
 
 # -------- Plugins --------
+## gv.vim
+- open commit browser
+`:GV`
+- commit only for the current file
+`:GV!`
+
 ## fzf.vim
 - open in a split
 `<C-x>`
