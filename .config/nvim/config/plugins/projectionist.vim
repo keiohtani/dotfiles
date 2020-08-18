@@ -3,6 +3,7 @@ let g:projectionist_heuristics = {
   \    '*.ts': {
   \      'alternate': [
   \        '{}.html',
+  \        '{}.scss',
   \        '{}.css',
   \        '{}.spec.ts'
   \      ],
@@ -10,11 +11,20 @@ let g:projectionist_heuristics = {
   \    },
   \    '*.html': {
   \      'alternate': [
+  \        '{}.scss',
   \        '{}.css',
   \        '{}.spec.ts',
   \        '{}.ts'
   \      ],
   \      'type': 'html'
+  \    },
+  \    '*.scss': {
+  \      'alternate': [
+  \        '{}.spec.ts',
+  \        '{}.ts',
+  \        '{}.html'
+  \      ],
+  \      'type': 'css'
   \    },
   \    '*.css': {
   \      'alternate': [
@@ -28,6 +38,7 @@ let g:projectionist_heuristics = {
   \      'alternate': [
   \        '{}.ts',
   \        '{}.html',
+  \        '{}.scss',
   \        '{}.css'
   \      ],
   \      'type': 'test'
