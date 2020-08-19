@@ -21,11 +21,13 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'majutsushi/tagbar'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'skywind3000/asyncrun.vim'
+Plug 'tommcdo/vim-fubitive'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
@@ -38,7 +40,13 @@ call plug#end()
 filetype plugin indent on
 syntax enable
 
+runtime! config/plugins/*.vim
+
+"
+" one line plugin setup
+"
 " vim-repeat setup
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 
-runtime! config/plugins/*.vim
+" fubitive setup
+let g:fubitive_domain_pattern = 'git\.forge\.lmig\.com'
