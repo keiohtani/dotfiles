@@ -7,6 +7,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'christoomey/vim-system-copy'
 Plug 'dkarter/bullets.vim', { 'for': 'markdown'}
 Plug 'itchyny/lightline.vim'
+Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim'
