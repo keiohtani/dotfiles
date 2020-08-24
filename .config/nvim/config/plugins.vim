@@ -33,7 +33,6 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tsony-tsonev/nerdtree-git-plugin'
-Plug 'vim-scripts/ReplaceWithRegister'
 
 " Initialize plugin system
 call plug#end()
