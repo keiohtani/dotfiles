@@ -9,7 +9,7 @@ cnoreabbrev gp Git pull
 nnoremap <leader>g :G<CR>
 nnoremap <leader>b :Gblame<CR>
 nnoremap <leader>h :diffget //2<CR>
-nnoremap <leader>l :diffget //2<CR>
+nnoremap <leader>l :diffget //3<CR>
 
 " leader leader
 nnoremap <leader><leader>b :Gbrowse<CR>
