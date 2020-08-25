@@ -1,0 +1,8 @@
+visual-studio-code
+google-chrome
+tableplus
+postman
+BetterTouchTool
+docker
+karabiner-elements
+alacritty

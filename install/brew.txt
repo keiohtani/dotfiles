@@ -1,0 +1,11 @@
+nvim
+tig
+speedtest
+git-secrets
+fzf
+fd
+ripgrep
+vifm
+exa
+dust
+zsh-autosuggestions
