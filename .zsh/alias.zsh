@@ -1,8 +1,10 @@
 uname=$(uname)
 
-source ./alias/git.zsh
+BASEDIR=$(dirname "$0")
+
+source $BASEDIR/alias/git.zsh
 
 if [[ $uname = 'Darwin' ]]; then
-    source ./alias/mac.zsh
-    source ./alias/docker.zsh
+    source $BASEDIR/alias/mac.zsh
+    source $BASEDIR/alias/docker.zsh
 fi
