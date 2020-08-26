@@ -9,3 +9,5 @@ vifm
 exa
 dust
 zsh-autosuggestions
+bat
+procs

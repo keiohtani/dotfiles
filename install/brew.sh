@@ -1,7 +1,10 @@
 #!/bin/bash 
+
+BASE_DIR=$(dirname $0)
+
 BREW_FILE=brew.txt
 BREW_CASK_FILE=brewcask.txt
-BASE_DIR=$(dirname $0)
+BREW_TAP_FILE=tap.txt
 
 if not type brew 2>/dev/null; then 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -13,7 +16,6 @@ brew cask upgrade
 brew cleanup
 brew cask cleanup
 brew doctor
-brew tap teamookla/speedtest
 
 for i in `cat $BASE_DIR/$BREW_FILE`
 do
@@ -23,4 +25,9 @@ done
 for i in `cat $BASE_DIR/$BREW_CASK_FILE`
 do
     brew cask list $i || brew cask install $i
+done
+
+for i in `cat $BASE_DIR/$BREW_TAP_FILE`
+do
+    brew tap $i
 done
