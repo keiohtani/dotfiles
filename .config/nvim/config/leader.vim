@@ -8,3 +8,4 @@ nnoremap <leader>o :only<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>t :15new term://zsh<CR>
+nnoremap <leader>r :registers<CR>
