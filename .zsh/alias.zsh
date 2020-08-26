@@ -1,10 +1,10 @@
 uname=$(uname)
 
-BASEDIR=$(dirname "$0")
+cd $(dirname $0)
 
-source $BASEDIR/alias/git.zsh
-
-if [[ $uname = 'Darwin' ]]; then
-    source $BASEDIR/alias/mac.zsh
-    source $BASEDIR/alias/docker.zsh
-fi
+for alias_file in ./alias/**/*; do
+    echo $alias_file
+    if [ ! -d $alias_file ]; then
+        source $alias_file
+    fi
+done
