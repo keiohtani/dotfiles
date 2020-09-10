@@ -11,5 +11,10 @@
   ],
   "coc.source.word.filetypes": ["markdown"],
   "coc.source.word.priority": 1,
-  "cSpell.enabled": false
+  "python.jediEnabled": false,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": ["--max-line-length=120"],
+  "python.linting.enabled": true,
+  "python.formatting.provider": "black"
 }
