@@ -1,6 +1,6 @@
 " LocalLeader
 let maplocalleader = ','
-nnoremap <LocalLeader>o :silent !open .<CR>
+nnoremap <LocalLeader>o :silent !open "%:p:h"<CR>
 nnoremap <LocalLeader>c :sp ~/dotfiles/vim_cheat_sheet.md<CR>
 nnoremap <LocalLeader>s :sp ~/dotfiles/.config/nvim/config/<CR>
 nnoremap <LocalLeader>f :let @" = expand("%:t:r")<CR>
