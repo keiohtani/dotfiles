@@ -2,6 +2,7 @@ command! -bang -nargs=* -complete=file Make AsyncRun -program=make @ <args>
 
 cnoreabbrev gc Gcommit
 cnoreabbrev gpsh Gpush
+cnoreabbrev gpshu Gpush -u origin HEAD
 cnoreabbrev gco Git checkout
 cnoreabbrev gp Git pull
 
