@@ -2,7 +2,6 @@ inoremap <silent> jj <ESC>
 tnoremap <silent> jj <C-\><C-n>
 cnoremap <silent> jj <C-c>
 
-nnoremap <CR> :
 autocmd CmdwinEnter * nnoremap <CR> <CR>
 autocmd BufReadPost quickfix nnoremap <CR> <CR>
 
