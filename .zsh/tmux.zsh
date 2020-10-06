@@ -18,7 +18,3 @@ if [[ ! -n $TMUX ]]; then
     fi
   fi
 fi
-
-if [[ -n "$TMUX" ]]; then	
-    mac_setup
-fi 
