@@ -20,3 +20,6 @@ nnoremap <S-Tab> :bprevious<CR>
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
+nnoremap <expr> k (v:count > 3 ? "m'" . v:count : '') . 'k'
+nnoremap <expr> j (v:count > 3 ? "m'" . v:count : '') . 'j'
