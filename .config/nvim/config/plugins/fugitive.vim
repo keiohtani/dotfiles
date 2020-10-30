@@ -5,6 +5,11 @@ cnoreabbrev gpsh Gpush
 cnoreabbrev gpshu Gpush -u origin HEAD
 cnoreabbrev gco Git checkout
 cnoreabbrev gp Git pull
+cnoreabbrev gm Git merge
+cnoreabbrev gs Git stash
+cnoreabbrev gsp Git stash pop
+cnoreabbrev gb Git branch
+
 
 " leader
 nnoremap <leader>g :G<CR>
