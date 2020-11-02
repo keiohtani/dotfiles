@@ -4,8 +4,10 @@ cnoreabbrev gc Gcommit
 cnoreabbrev gpsh Gpush
 cnoreabbrev gpshu Gpush -u origin HEAD
 cnoreabbrev gco Git checkout
+cnoreabbrev gcod Git checkout develop
 cnoreabbrev gp Git pull
 cnoreabbrev gm Git merge
+cnoreabbrev gmd Git merge develop
 cnoreabbrev gs Git stash
 cnoreabbrev gsp Git stash pop
 cnoreabbrev gb Git branch
