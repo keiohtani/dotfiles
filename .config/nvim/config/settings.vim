@@ -1,33 +1,32 @@
-set mouse=a
-set number relativenumber
-set nu rnu
-set cursorline
-set virtualedit=onemore
-set smartindent
 set autoindent
-set ignorecase
-set smartcase
-set incsearch
-set showmatch
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set wildmenu
-" set spell
+set autoread
 set background=light
-set scrolloff=999       " always center the cursor when possible
-set sidescrolloff=6
-set splitbelow
-set splitright
+set cmdheight=1
+set cursorline
+set expandtab
 set formatoptions-=cro
+set ignorecase
+set incsearch
 set lazyredraw          " Don't redraw while executing macros (good performance config)
 set magic               " For regular expressions turn magic on
-set noerrorbells
-set novisualbell
-set t_vb=
-set tm=500
+set mouse=a
 set nobackup
-set nowb
+set noerrorbells
 set noswapfile
-set cmdheight=1
-set autoread
+set novisualbell
+set nowb
+set nu rnu
+set number relativenumber
+set scrolloff=999       " always center the cursor when possible
+set shiftwidth=4
+set showmatch
+set sidescrolloff=6
+set smartcase
+set smartindent
+set splitbelow
+set splitright
+set t_vb=
+set tabstop=4
+set tm=500
+set virtualedit=onemore
+set wildmenu
