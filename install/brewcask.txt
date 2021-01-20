@@ -9,3 +9,6 @@ alacritty
 notion
 brave-browser
 microsoft-teams
+microsoft-powerpoint
+microsoft-word
+zoomus
