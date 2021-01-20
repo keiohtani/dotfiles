@@ -6,7 +6,7 @@ BREW_FILE=brew.txt
 BREW_CASK_FILE=brewcask.txt
 BREW_TAP_FILE=tap.txt
 
-if not type brew 2>/dev/null; then 
+if ! command -v brew &> /dev/null; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
