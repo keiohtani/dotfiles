@@ -9,9 +9,8 @@ raspi_install(){
 }
 
 mac_install(){
-    defaults write -g ApplePressAndHoldEnabled -bool false
-    sh install/install_node.sh
     sh install/install_brew.sh
+    sh install/install_node.sh
     sh install/setup_git.sh
 }
 

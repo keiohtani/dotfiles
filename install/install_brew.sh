@@ -14,19 +14,16 @@ fi
 
 brew update
 brew upgrade
-brew cask upgrade
-brew cleanup
-brew cask cleanup
-brew doctor
+brew upgrade --cask
 
 for i in `cat $BASE_DIR/$BREW_FILE`
 do
-    brew list $i || brew install $i
+    if ! brew ls --versions $i > /dev/null; then brew install $i; fi
 done
 
 for i in `cat $BASE_DIR/$BREW_CASK_FILE`
 do
-    brew list --cask $i || brew install --cask $i
+    if ! brew ls --cask --versions $i > /dev/null; then brew install --cask $i; fi
 done
 
 for i in `cat $BASE_DIR/$BREW_TAP_FILE`

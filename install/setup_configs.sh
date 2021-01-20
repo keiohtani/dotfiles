@@ -6,6 +6,8 @@ for dotfile in .?*; do
     fi
 done
 
+ln -vis $PWD/.zsh $HOME
+
 for config_dir in .config/*; do
     if [ -d $config_dir ]; then 
         echo $config_dir

@@ -1,8 +1,3 @@
-echo 'Installing nodenv'
-brew install nodenv
-nodenv init
-echo 'Installing yarn...'
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt remove cmdtest
-sudo apt install yarn
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+nvm install 14
+npm install --global yarn

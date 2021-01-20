@@ -1,4 +1,5 @@
 neovim
+tmux
 tig
 speedtest
 git-secrets
