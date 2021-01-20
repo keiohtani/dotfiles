@@ -26,7 +26,7 @@ done
 
 for i in `cat $BASE_DIR/$BREW_CASK_FILE`
 do
-    brew cask list $i || brew cask install $i
+    brew list --cask $i || brew install --cask $i
 done
 
 for i in `cat $BASE_DIR/$BREW_TAP_FILE`
