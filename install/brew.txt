@@ -1,4 +1,4 @@
-nvim
+neovim
 tig
 speedtest
 git-secrets

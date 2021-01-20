@@ -3,6 +3,6 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 python3 -m pip install --user --upgrade pynvim
 
-sudo gem install neovim
+gem install neovim
 
 npm install -g neovim
