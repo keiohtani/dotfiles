@@ -13,7 +13,6 @@ mac_install(){
     sh install/install_node.sh
     sh install/install_brew.sh
     sh install/setup_git.sh
-    sh vscode/install_vscode_extensions.sh 
 }
 
 if [ $uname = 'Darwin' ]; then
@@ -22,4 +21,4 @@ elif [ $uname = 'Linux' ]; then
     raspi_install
 fi
 
-sh install/setup_neovim.sh
+sh install/install_neovim.sh
