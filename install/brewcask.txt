@@ -6,3 +6,6 @@ BetterTouchTool
 docker
 karabiner-elements
 alacritty
+notion
+brave-browser
+microsoft-teams

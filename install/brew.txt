@@ -11,3 +11,4 @@ dust
 zsh-autosuggestions
 bat
 procs
+gh
