@@ -16,9 +16,17 @@
                 },
                 "rules": [
                     {
-                        "description": "Map control-i and control-o to function keys",
+                        "description": "Map control-i and control-o to function keys only for nvim",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                      "type": "frontmost_application_if",
+                                      "file_paths": [
+                                        "nvim"
+                                      ]
+                                    }
+                                  ],
                                 "from": {
                                     "key_code": "o",
                                     "modifiers": {
@@ -35,6 +43,14 @@
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                      "type": "frontmost_application_if",
+                                      "file_paths": [
+                                        "nvim"
+                                      ]
+                                    }
+                                  ],
                                 "from": {
                                     "key_code": "i",
                                     "modifiers": {
