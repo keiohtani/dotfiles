@@ -1,13 +1,25 @@
 {
   "workbench.colorTheme": "Solarized Dark",
-  "editor.lineNumbers": "relative",
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "j"],
       "after": ["<Esc>"]
     }
   ],
+  "editor.lineNumbers": "relative",
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-o>"],
+      "commands": ["workbench.action.navigateBack"]
+    },
+    {
+      "before": ["<C-i>"],
+      "commands": ["workbench.action.navigateForward"]
+    },
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["workbench.action.terminal.new"]
+    },
     {
       "before": ["<leader>", "w"],
       "commands": [":write"]
@@ -32,8 +44,12 @@
   "vim.highlightedyank.enable": true,
   "vim.surround": true,
   "vim.leader": "<space>",
-  "vim.sneak": false,
   "editor.formatOnSave": true,
-  "git.autofetch": true
+  "git.autofetch": true,
+  "vim.handleKeys": {
+    "<C-o>": true,
+    "<C-d>": true
+  },
+  "terminal.integrated.shell.osx": "/bin/zsh"
 }
 
