@@ -4,6 +4,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
+Plug 'alvan/vim-closetag'
 Plug 'christoomey/vim-system-copy'
 Plug 'dkarter/bullets.vim', { 'for': 'markdown'}
 Plug 'itchyny/lightline.vim'
