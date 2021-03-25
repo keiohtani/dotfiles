@@ -17,5 +17,6 @@
   "python.linting.flake8Args": ["--max-line-length=120"],
   "python.linting.enabled": true,
   "cSpell.enabledLanguageIds": ["markdown"],
-  "python.formatting.provider": "black"
+  "python.formatting.provider": "black",
+  "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"]
 }
