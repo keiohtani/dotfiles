@@ -69,7 +69,7 @@
     "BTTForceForceClickPressure5F" : 600,
     "BTTForceForceClickPressure" : 700,
     "BSTMemorySaver" : true,
-    "BTTLastClamshellState" : false,
+    "BTTLastClamshellState" : true,
     "BTTTouchBarAnimateGroups" : true,
     "BTTShowBTTWhenControlStripHidden" : true,
     "BTTFreeSpaceAfterESC" : 10,
@@ -149,7 +149,7 @@
     "showOtherTriggersTab" : true,
     "BSTSnapAreaDefaultPictoDistanceFromLeft" : 0.10000000149011612
   },
-  "BTTPresetUUID" : "225D0D21-B1EE-4016-99DD-FA35C05F5083",
+  "BTTPresetUUID" : "46F2FA54-3C1E-410A-A2AB-2076D7C04652",
   "BTTPresetContent" : [
     {
       "BTTAppBundleIdentifier" : "BT.G",
@@ -255,7 +255,7 @@
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
           "BTTPredefinedActionType" : 137,
           "BTTPredefinedActionName" : "Execute Terminal Command (Async, non-blocking)",
-          "BTTTerminalCommand" : "\/usr\/local\/bin\/SwitchAudioSource -u “AppleUSBAudioEngine:Unknown Manufacturer:Unknown USB Audio Device:54BC6CD0:3”",
+          "BTTTerminalCommand" : "\/usr\/local\/bin\/SwitchAudioSource  -u \"AppleUSBAudioEngine:DisplayLink:USB3.0  Display:PCT_360100013:3\"",
           "BTTAdditionalConfiguration" : "1441803",
           "BTTEnabled2" : 1,
           "BTTKeyboardShortcutScope" : 0,
