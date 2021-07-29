@@ -13,3 +13,5 @@ zsh-autosuggestions
 bat
 procs
 gh
+pyenv
+SwitchAudioSource
