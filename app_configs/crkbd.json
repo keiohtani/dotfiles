@@ -132,7 +132,7 @@
       "KC_NO",
       "S(LWIN(SWIN(KC_3)))",
       "S(LWIN(SWIN(KC_4)))",
-      "KC_NO",
+      "S(LWIN(SWIN(KC_5)))",
       "KC_LSFT",
       "KC_NO",
       "KC_NO",
