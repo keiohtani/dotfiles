@@ -43,8 +43,8 @@
       "KC_NO",
       "KC_NO",
       "KC_LCTL",
-      "KC_LGUI",
-      "LT(2,KC_ENT)",
+      "MT(MOD_LGUI,KC_SPC)",
+      "SPC_FN2",
       "KC_NO",
       "KC_P",
       "KC_O",
@@ -67,8 +67,8 @@
       "KC_NO",
       "KC_NO",
       "KC_RCTL",
-      "MT(MOD_LGUI | MOD_RGUI,KC_BSPC)",
-      "SPC_FN1"
+      "MT(MOD_LGUI,KC_BSPC)",
+      "LT(1,KC_ENT)"
     ],
     [
       "KC_GRV",
@@ -92,8 +92,8 @@
       "KC_NO",
       "KC_NO",
       "KC_NO",
-      "KC_LCTL",
-      "KC_LGUI",
+      "KC_NO",
+      "KC_NO",
       "MO(3)",
       "KC_NO",
       "KC_NO",
@@ -112,7 +112,7 @@
       "KC_NO",
       "KC_NO",
       "0x81",
-      "0x7f",
+      "C(S(LWIN(SWIN(RCTL(RSFT(RWIN(KC_O)))))))",
       "KC_NO",
       "KC_NO",
       "KC_NO",
@@ -145,7 +145,7 @@
       "KC_NO",
       "KC_NO",
       "KC_TRNS",
-      "KC_NO",
+      "KC_BSPC",
       "KC_MINS",
       "KC_9",
       "KC_8",
@@ -167,8 +167,8 @@
       "KC_NO",
       "KC_NO",
       "KC_P0",
-      "MT(MOD_LGUI | MOD_RGUI,KC_BSPC)",
-      "SPC_FN3"
+      "KC_BSPC",
+      "MO(3)"
     ],
     [
       "KC_NO",
@@ -194,7 +194,7 @@
       "KC_NO",
       "KC_NO",
       "KC_NO",
-      "KC_TRNS",
+      "TO(3)",
       "C(LWIN(RCTL(RWIN(KC_Q))))",
       "KC_NO",
       "KC_NO",
@@ -218,7 +218,7 @@
       "KC_NO",
       "KC_NO",
       "KC_NO",
-      "KC_TRNS"
+      "TO(3)"
     ]
   ]
 }
