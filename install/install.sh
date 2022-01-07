@@ -20,4 +20,4 @@ elif [ $uname = 'Linux' ]; then
     raspi_install
 fi
 
-sh install/install_neovim.sh
+sh install/setup_neovim.sh
