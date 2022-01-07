@@ -15,3 +15,4 @@ procs
 gh
 pyenv
 SwitchAudioSource
+python3
