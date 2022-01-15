@@ -2,9 +2,19 @@
 - replace
 `:%s/Search-Word/Replace-Word/g`
 
+## Go Functions
+- Go to a file
+`gf`
+- Go to a link
+`gx`
+- Go to the definition
+`gd`
+- Go to the implementation
+`gi`
+
 ## buffer
 `:enew` `:new` `:vnew`
-- go file
+- go to a file
 `gf`
 
 ## X completion mode
