@@ -1,4 +1,14 @@
 # dotfiles
+## How to get started
+1. Install the apps
+```
+sh install/install.sh
+```
+2. Set up the apps
+```
+sh install/setup.sh
+```
+
 ## Additional instruction for Windows Subsystem as Linux
 1. Go to "Turn Windows features on or off" and turn on WSL
 2. Install Ubuntu and Windows Terminal from Microsoft Store
@@ -14,11 +24,7 @@
 
 ## Chrome Extensions
 - Grammarly
-- Just Read
 - 1Password
-- Pesticide for Chrome
-- React Developer Tools
-- Add to Wunderlist
 - Vimium
 
 ## Commands
