@@ -6,6 +6,7 @@ if [ "$TMUX" ]; then
   source $HOME/.zsh/exports.zsh
   source $HOME/.zsh/go.zsh
   source $HOME/.zsh/plugins.zsh
+  source $HOME/.zsh/nvm.zsh
   source $HOME/.zsh/zsh.zsh
   source $HOME/.zshrc_local.zsh
 fi
