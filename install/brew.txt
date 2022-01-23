@@ -1,3 +1,5 @@
+python3
+node
 neovim
 tmux
 tig
@@ -14,5 +16,3 @@ bat
 procs
 gh
 pyenv
-SwitchAudioSource
-python3
