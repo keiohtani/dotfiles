@@ -1,8 +1,12 @@
-# ---------- vim ------------
+# Cheat Sheet
+
+## ---------- vim ------------
+
 - replace
 `:%s/Search-Word/Replace-Word/g`
 
-## Go Functions
+### Go Functions
+
 - Go to a file
 `gf`
 - Go to a link
@@ -12,13 +16,16 @@
 - Go to the implementation
 `gi`
 
-## buffer
+### buffer
+
 `:enew` `:new` `:vnew`
+
 - go to a file
 `gf`
 
-## X completion mode
-- tag 
+### X completion mode
+
+- tag
 `<C-x><C-]>`
 - filename
 `<C-x><C-f>`
@@ -29,12 +36,15 @@
 - omni
 `<C-x><C-o>`
 
-## dictionary
+### dictionary
+
 - add word under the cursor as a good word
 `zg` or `zug`
 - add word under the cursor as a bad word
 `zw` or `zuw`
-## default
+
+### default
+
 - move current line to the middle of the screen
 `zz`
 
@@ -49,7 +59,7 @@
 `,` backward
 
 - see the content of registers
-`:registers` 
+`:registers`
 
 - check if mapping exists
 `:mapcheck("<CR>", "n")`
@@ -75,7 +85,8 @@
 - search word under the cursor
 `*`
 
-## window
+### window
+
 - Horizontal split
 `:sp`
 
@@ -86,31 +97,37 @@
 `number <C-w> -/+` or `:res +/-number` vertical
 `number <C-w> >/<` or `:vertical res +/-number` horizontal
 
-## netrw
+### netrw
+
 - Create new file in the file explore
 `%`
 
 - Rename a file
 `R`
 
-# -------- Custom ---------
-- open cheatsheet
-<leader>c
+## -------- Custom ---------
 
-# -------- Plugins --------
-## gv.vim
+- open cheatsheet
+`<leader>c`
+
+## -------- Plugins --------
+
+### gv.vim
+
 - open commit browser
 `:GV`
 - commit only for the current file
 `:GV!`
 
-## fzf.vim
+### fzf.vim
+
 - open in a split
 `<C-x>`
 - open in a vsplit
 `<C-v>`
 
-## Bullets.vim
+### Bullets.vim
+
 - indent
 `>>`
 `<C-t>`
@@ -118,7 +135,8 @@
 `<<`
 `<C-d>`
 
-## custom textobj
+### custom textobj
+
 - function
 `af`, `if`, `aF`, `iF`
 
@@ -128,7 +146,8 @@
 - line
 `al`, `il`, `aL`, `iL`
 
-## vim-system-copy
+### vim-system-copy
+
 - basic
 `cp<motion>`
 - line copy
@@ -136,13 +155,16 @@
 - paste
 `cv`
 
-## ReplaceWithRegister
+### ReplaceWithRegister
+
 `gr<motion>`
 
-## vim surround
+### vim surround
+
 `<operation>s<tag>` - ex `ds"`
 
-## fugitive
+### fugitive
+
 - git status
 `:G`
 
@@ -167,7 +189,8 @@
 - jump to next/previou funks
 `]c` `[c`
 
-## NERDTree
+### NERDTree
+
 - move up the directory
 `u` or `U`
 
@@ -178,19 +201,22 @@
 `go`
 `gi` for split window
 
-## ctrlp
+### ctrlp
+
 - open a selected file in vsplit
 `<C-v>`
 - open a selected file in split
 `<C-s>`
 
-## coc
+### coc
+
 - goto definition
 `gf`
 
 - goto implementation
 `gi`
 
-## tcomment_vim
+### tcomment_vim
+
 - toggle comment
 `gc{motion}`
