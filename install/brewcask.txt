@@ -11,5 +11,5 @@ notion
 brave-browser
 microsoft-powerpoint
 microsoft-word
-zoomus
+zoom
 1password
