@@ -7,4 +7,5 @@ function! HandleURL()
     echo "No URI found in line."
   endif
 endfunction
+
 nnoremap gx :call HandleURL()<cr>

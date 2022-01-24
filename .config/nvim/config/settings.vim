@@ -30,3 +30,4 @@ set tabstop=4
 set tm=500
 set virtualedit=onemore
 set wildmenu
+set nohlsearch

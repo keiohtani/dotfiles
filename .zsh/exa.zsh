@@ -5,5 +5,5 @@ if type exa &>/dev/null; then
 else
   alias l='ls -lah'
   alias ll='ls -alF'
-  alias la='ls -A'
+  alias la='ls -la'
 fi
