@@ -9,13 +9,7 @@ fi
 autoload -U compinit
 
 HISTSIZE=1000
-HISTFILE=~/.zhistory
 SAVEHIST=1000
-
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# vi mode
-bindkey -v
 
 export KEYTIMEOUT=25
 
@@ -31,11 +25,4 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
-# insert mode
-bindkey -M viins '^R'  history-incremental-pattern-search-backward
 bindkey -M viins '^E'  autosuggest-accept
-bindkey -M viins 'jj' vi-cmd-mode
-
-# command mode
-bindkey -M vicmd '?' history-incremental-search-backward
-bindkey -M vicmd '/' history-incremental-search-forward

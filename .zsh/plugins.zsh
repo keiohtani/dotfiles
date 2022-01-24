@@ -11,9 +11,8 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-# Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#859900,underline"
 
-# MyPlugins
-## fzf
-export FZF_DEFAULT_COMMAND='fd --hidden --exclude .git -g ""'
+zinit ice depth=1
+zinit light jeffreytse/zsh-vi-mode
