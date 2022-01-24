@@ -9,6 +9,7 @@
     "typescript.tsx",
     "python"
   ],
+  "prettier.tabWidth": 4,
   "coc.source.word.filetypes": ["markdown"],
   "coc.source.word.priority": 1,
   "python.jediEnabled": false,
