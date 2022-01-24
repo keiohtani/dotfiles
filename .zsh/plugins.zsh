@@ -16,3 +16,4 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#859900,underline"
 
 zinit ice depth=1
 zinit light jeffreytse/zsh-vi-mode
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jj
