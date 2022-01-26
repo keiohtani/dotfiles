@@ -14,6 +14,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-plug'
 Plug 'justinmk/vim-dirvish'
+Plug 'roginfarrer/vim-dirvish-dovish', {'branch': 'main'}
 Plug 'justinmk/vim-sneak'
 Plug 'kana/vim-textobj-function'
 Plug 'kana/vim-textobj-indent'
