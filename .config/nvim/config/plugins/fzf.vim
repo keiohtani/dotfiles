@@ -1,8 +1,7 @@
 " fzf.vim
-nnoremap <C-g> :Files<CR>
-nnoremap <C-s> :Rg<CR>
-nnoremap <C-b> :Buffers<CR>
-nnoremap <C-f> :GFiles<CR>
+nnoremap <expr> <C-f> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
+nnoremap <expr> <C-s> :Rg<CR>
+nnoremap <expr> <C-b> :Buffers<CR>
 
 function! RipgrepFzf(query, fullscreen)
   let command_fmt = 'rg --column --hidden --line-number --no-heading --color=always --smart-case -- '.shellescape(a:query)
