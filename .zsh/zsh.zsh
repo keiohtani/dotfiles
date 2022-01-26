@@ -14,3 +14,5 @@ SAVEHIST=1000
 export KEYTIMEOUT=25
 
 bindkey -M viins '^E'  autosuggest-accept
+bindkey -M viins '^d' exit_zsh
+bindkey -M vicmd '^d' exit_zsh
