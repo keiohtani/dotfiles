@@ -2,158 +2,182 @@
 
 ## ---------- vim ------------
 
-- replace
-`:%s/Search-Word/Replace-Word/g`
+-   replace
+    `:%s/Search-Word/Replace-Word/g`
 
 ### Go Functions
 
-- Go to a file
-`gf`
-- Go to a link
-`gx`
-- Go to the definition
-`gd`
-- Go to the implementation
-`gi`
+-   Go to a file
+    `gf`
+-   Go to a link
+    `gx`
+-   Go to the definition
+    `gd`
+-   Go to the implementation
+    `gi`
 
 ### buffer
 
 `:enew` `:new` `:vnew`
 
-- go to a file
-`gf`
+-   go to a file
+    `gf`
 
 ### X completion mode
 
-- tag
-`<C-x><C-]>`
-- filename
-`<C-x><C-f>`
-- context-aware word
-`<C-x><C-p>`
-- line
-`<C-x><C-l>`
-- omni
-`<C-x><C-o>`
+-   tag
+    `<C-x><C-]>`
+-   filename
+    `<C-x><C-f>`
+-   context-aware word
+    `<C-x><C-p>`
+-   line
+    `<C-x><C-l>`
+-   omni
+    `<C-x><C-o>`
 
 ### dictionary
 
-- add word under the cursor as a good word
-`zg` or `zug`
-- add word under the cursor as a bad word
-`zw` or `zuw`
+-   add word under the cursor as a good word
+    `zg` or `zug`
+-   add word under the cursor as a bad word
+    `zw` or `zuw`
 
 ### default
 
-- move current line to the middle of the screen
-`zz`
+-   move current line to the middle of the screen
+    `zz`
 
-- move current line to the top of the screen
-`zt`
+-   move current line to the top of the screen
+    `zt`
 
-- move current line to the bottom of the screen
-`zb`
+-   move current line to the bottom of the screen
+    `zb`
 
-- repeat find next character
-`;` forward
-`,` backward
+-   repeat find next character
+    `;` forward
+    `,` backward
 
-- see the content of registers
-`:registers`
+-   see the content of registers
+    `:registers`
 
-- check if mapping exists
-`:mapcheck("<CR>", "n")`
+-   check if mapping exists
+    `:mapcheck("<CR>", "n")`
 
-- go back to previous location
-`<C-o>`
+-   go back to previous location
+    `<C-o>`
 
-- go forward in locations
-`<C-i>`
+-   go forward in locations
+    `<C-i>`
 
-- change to lowercase
-`gu`
+-   change to lowercase
+    `gu`
 
-- change to uppercase
-`gU`
+-   change to uppercase
+    `gU`
 
-- cycle through
-`:jumps`
+-   cycle through
+    `:jumps`
 
-- jump to the link
-`<C-]>`
+-   jump to the link
+    `<C-]>`
 
-- search word under the cursor
-`*`
+-   search word under the cursor
+    `*`
 
 ### window
 
-- Horizontal split
-`:sp`
+-   Horizontal split
+    `:sp`
 
-- Vertical split
-`:vs`
+-   Vertical split
+    `:vs`
 
-- change windows size
-`number <C-w> -/+` or `:res +/-number` vertical
-`number <C-w> >/<` or `:vertical res +/-number` horizontal
+-   change window size
+
+    -   vertical
+
+    ```
+    number <C-w> -/+` or `:res +/-number
+    ```
+
+    -   horizontal
+
+    ```
+    number <C-w> >/<` or `:vertical res +/-number
+    ```
+
+-   set window size
+
+    -   vertical
+
+    ```
+    :resize 60
+    ```
+
+    -   horizontal
+
+    ```
+    :vertical resize 60
+    ```
 
 ### netrw
 
-- Create new file in the file explore
-`%`
+-   Create new file in the file explore
+    `%`
 
-- Rename a file
-`R`
+-   Rename a file
+    `R`
 
 ## -------- Custom ---------
 
-- open cheatsheet
-`<leader>c`
+-   open cheatsheet
+    `<leader>c`
 
 ## -------- Plugins --------
 
 ### gv.vim
 
-- open commit browser
-`:GV`
-- commit only for the current file
-`:GV!`
+-   open commit browser
+    `:GV`
+-   commit only for the current file
+    `:GV!`
 
 ### fzf.vim
 
-- open in a split
-`<C-x>`
-- open in a vsplit
-`<C-v>`
+-   open in a split
+    `<C-x>`
+-   open in a vsplit
+    `<C-v>`
 
 ### Bullets.vim
 
-- indent
-`>>`
-`<C-t>`
-- dedent
-`<<`
-`<C-d>`
+-   indent
+    `>>`
+    `<C-t>`
+-   dedent
+    `<<`
+    `<C-d>`
 
 ### custom textobj
 
-- function
-`af`, `if`, `aF`, `iF`
+-   function
+    `af`, `if`, `aF`, `iF`
 
-- indent
-`ai`, `ii`, `aI`, `iI`
+-   indent
+    `ai`, `ii`, `aI`, `iI`
 
-- line
-`al`, `il`, `aL`, `iL`
+-   line
+    `al`, `il`, `aL`, `iL`
 
 ### vim-system-copy
 
-- basic
-`cp<motion>`
-- line copy
-`cP`
-- paste
-`cv`
+-   basic
+    `cp<motion>`
+-   line copy
+    `cP`
+-   paste
+    `cv`
 
 ### ReplaceWithRegister
 
@@ -165,58 +189,58 @@
 
 ### fugitive
 
-- git status
-`:G`
+-   git status
+    `:G`
 
-- add to stage
-`s`
+-   add to stage
+    `s`
 
-- unstage
-`u`
+-   unstage
+    `u`
 
-- difftoal
-`dv`
+-   difftoal
+    `dv`
 
-- drop in difftool
-`dp`
+-   drop in difftool
+    `dp`
 
-- commit
-`:Gcommit`
+-   commit
+    `:Gcommit`
 
-- push
-`:Gpush`
+-   push
+    `:Gpush`
 
-- jump to next/previou funks
-`]c` `[c`
+-   jump to next/previou funks
+    `]c` `[c`
 
 ### NERDTree
 
-- move up the directory
-`u` or `U`
+-   move up the directory
+    `u` or `U`
 
-- Open commands
-`m`
+-   Open commands
+    `m`
 
-- Open file without moving the cursor
-`go`
-`gi` for split window
+-   Open file without moving the cursor
+    `go`
+    `gi` for split window
 
 ### ctrlp
 
-- open a selected file in vsplit
-`<C-v>`
-- open a selected file in split
-`<C-s>`
+-   open a selected file in vsplit
+    `<C-v>`
+-   open a selected file in split
+    `<C-s>`
 
 ### coc
 
-- goto definition
-`gf`
+-   goto definition
+    `gf`
 
-- goto implementation
-`gi`
+-   goto implementation
+    `gi`
 
 ### tcomment_vim
 
-- toggle comment
-`gc{motion}`
+-   toggle comment
+    `gc{motion}`
