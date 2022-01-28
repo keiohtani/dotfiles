@@ -21,4 +21,4 @@ nnoremap <leader>h :diffget //2<CR>
 nnoremap <leader>l :diffget //3<CR>
 
 " leader leader
-nnoremap <leader><leader>b :Git browse<CR>
+nnoremap <leader><leader>b :GBrowse<CR>
