@@ -15,10 +15,10 @@ cnoreabbrev gsp Git stash pop
 
 
 " leader
-nnoremap <leader>b :Gblame<CR>
+nnoremap <leader>b :Git blame<CR>
 nnoremap <leader>g :G<CR>
 nnoremap <leader>h :diffget //2<CR>
 nnoremap <leader>l :diffget //3<CR>
 
 " leader leader
-nnoremap <leader><leader>b :Gbrowse<CR>
+nnoremap <leader><leader>b :Git browse<CR>
