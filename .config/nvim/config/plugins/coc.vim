@@ -36,7 +36,7 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Mappings for CoCList
 " Show all diagnostics.
-nnoremap <leader>d :CocList diagnostics<CR>
+nnoremap <leader>d :CocDiagnostics<CR>
 " Do default action for next item.
 nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
