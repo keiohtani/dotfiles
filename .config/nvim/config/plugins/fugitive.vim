@@ -5,6 +5,7 @@ cnoreabbrev gc Git commit
 cnoreabbrev gchp Git cherry-pick
 cnoreabbrev gco Git checkout
 cnoreabbrev gcod Git checkout develop
+cnoreabbrev gcom Git checkout master
 cnoreabbrev gm Git merge
 cnoreabbrev gmd Git merge develop
 cnoreabbrev gp Git pull
