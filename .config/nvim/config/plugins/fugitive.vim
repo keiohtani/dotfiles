@@ -12,6 +12,7 @@ cnoreabbrev gpsh Git push
 cnoreabbrev gpshu Git push -u origin HEAD
 cnoreabbrev gs Git stash
 cnoreabbrev gsp Git stash pop
+cnoreabbrev gl Git log
 
 
 " leader
