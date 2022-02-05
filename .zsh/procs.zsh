@@ -1,3 +1,3 @@
 if type procs &>/dev/null; then
-    alias ps="proc"
+    alias ps="procs"
 fi
