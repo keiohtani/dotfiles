@@ -4,6 +4,7 @@ cnoreabbrev gb Git branch
 cnoreabbrev gc Git commit
 cnoreabbrev gchp Git cherry-pick
 cnoreabbrev gco Git checkout
+cnoreabbrev gcob Git checkout -b 
 cnoreabbrev gcod Git checkout develop
 cnoreabbrev gcom Git checkout master
 cnoreabbrev gm Git merge
