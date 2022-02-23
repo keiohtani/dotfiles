@@ -15,5 +15,6 @@ if [ "$TMUX" ]; then
   source $HOME/.zsh/plugins.zsh
   source $HOME/.zsh/procs.zsh
   source $HOME/.zsh/zsh.zsh
+  source $HOME/.zsh/node.zsh
   source $HOME/.zshrc_local.zsh
 fi
