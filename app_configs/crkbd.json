@@ -179,11 +179,11 @@
       "C(S(LWIN(SWIN(RCTL(RSFT(RWIN(KC_T)))))))",
       "KC_NO",
       "C(S(LWIN(SWIN(RCTL(RSFT(RWIN(KC_A)))))))",
-      "KC_NO",
+      "C(S(LWIN(SWIN(RCTL(RSFT(RWIN(KC_S)))))))",
       "C(S(LWIN(SWIN(KC_D))))",
       "C(S(LWIN(SWIN(RCTL(RSFT(RWIN(KC_F)))))))",
       "KC_NO",
-      "KC_NO",
+      "KC_LALT",
       "C(S(LWIN(SWIN(RCTL(RSFT(RWIN(KC_Z)))))))",
       "KC_NO",
       "C(S(LWIN(SWIN(KC_C))))",
@@ -202,11 +202,11 @@
       "C(S(LWIN(SWIN(KC_U))))",
       "KC_NO",
       "KC_NO",
-      "S(LWIN(SWIN(KC_SCLN)))",
-      "S(LWIN(SWIN(KC_L)))",
-      "LWIN(RWIN(KC_GRV))",
-      "S(LWIN(SWIN(KC_J)))",
-      "S(LWIN(SWIN(KC_H)))",
+      "C(S(LWIN(SWIN(RCTL(RSFT(RWIN(KC_SCLN)))))))",
+      "C(S(LWIN(SWIN(RCTL(RSFT(RWIN(KC_L)))))))",
+      "C(S(LWIN(SWIN(RCTL(RSFT(RWIN(KC_K)))))))",
+      "C(S(LWIN(SWIN(RCTL(RSFT(RWIN(KC_J)))))))",
+      "C(S(LWIN(SWIN(RCTL(RSFT(RWIN(KC_H)))))))",
       "KC_NO",
       "KC_NO",
       "KC_NO",
@@ -222,3 +222,4 @@
     ]
   ]
 }
+
