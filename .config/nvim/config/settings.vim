@@ -18,7 +18,7 @@ set nowb
 set nu rnu
 set number relativenumber
 set scrolloff=999       " always center the cursor when possible
-set shiftwidth=4
+set shiftwidth=2
 set showmatch
 set sidescrolloff=6
 set smartcase
@@ -26,7 +26,8 @@ set smartindent
 set splitbelow
 set splitright
 set t_vb=
-set tabstop=4
+set tabstop=2
+set softtabstop=2
 set tm=500
 set virtualedit=onemore
 set wildmenu
