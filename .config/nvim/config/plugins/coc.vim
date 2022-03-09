@@ -45,8 +45,8 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> cn <Plug>(coc-diagnostic-next)
+nmap <silent> cp <Plug>(coc-diagnostic-prev)
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
 " position. Coc only does snippet and additional edit on confirm.
