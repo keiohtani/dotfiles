@@ -207,7 +207,7 @@
       "C(S(LWIN(SWIN(KC_D))))",
       "C(S(LWIN(SWIN(RCTL(RSFT(RWIN(KC_F)))))))",
       "KC_NO",
-      "KC_NO",
+      "KC_RALT",
       "C(S(LWIN(SWIN(RCTL(RSFT(RWIN(KC_Z)))))))",
       "KC_NO",
       "C(S(LWIN(SWIN(KC_C))))",
