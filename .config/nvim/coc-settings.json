@@ -1,5 +1,12 @@
 {
   "suggest.noselect": false,
+  "languageserver": {
+    "csharp-ls": {
+      "command": "csharp-ls",
+      "filetypes": ["cs"],
+      "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/"]
+    }
+  },
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "typescript",
@@ -26,5 +33,13 @@
   "python.linting.enabled": true,
   "cSpell.enabledLanguageIds": ["markdown"],
   "python.formatting.provider": "black",
-  "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"]
+  "pairs.enableCharacters": [
+    "(",
+    "[",
+    "{",
+    "'",
+    "\"",
+    "`"
+  ],
+  "svelte.enable-ts-plugin": true
 }

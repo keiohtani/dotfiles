@@ -3,6 +3,7 @@ source $HOME/.zsh/tmux.zsh
 if [ "$TMUX" ]; then
   source $HOME/.zsh/bat.zsh
   source $HOME/.zsh/docker.zsh
+  source $HOME/.zsh/dotnet.zsh
   source $HOME/.zsh/dust.zsh
   source $HOME/.zsh/exa.zsh
   source $HOME/.zsh/fzf.zsh

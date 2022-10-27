@@ -14,5 +14,6 @@ dust
 zsh-autosuggestions
 bat
 procs
+bottom
 gh
 pyenv
