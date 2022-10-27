@@ -14,7 +14,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-plug'
 Plug 'justinmk/vim-dirvish'
-Plug 'roginfarrer/vim-dirvish-dovish', {'branch': 'main'}
 Plug 'justinmk/vim-sneak'
 Plug 'kana/vim-textobj-function'
 Plug 'kana/vim-textobj-indent'
@@ -22,7 +21,9 @@ Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 Plug 'machakann/vim-highlightedyank'
 Plug 'majutsushi/tagbar'
+Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'roginfarrer/vim-dirvish-dovish', {'branch': 'main'}
 Plug 'skywind3000/asyncrun.vim'
 Plug 'tommcdo/vim-fubitive'
 Plug 'tomtom/tcomment_vim'
