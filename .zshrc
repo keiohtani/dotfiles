@@ -11,11 +11,12 @@ if [ "$TMUX" ]; then
   source $HOME/.zsh/github.zsh
   source $HOME/.zsh/go.zsh
   source $HOME/.zsh/mac.zsh
+  source $HOME/.zsh/node.zsh
   source $HOME/.zsh/nvm.zsh
-  source $HOME/.zsh/rbenv.zsh
   source $HOME/.zsh/plugins.zsh
   source $HOME/.zsh/procs.zsh
+  source $HOME/.zsh/rbenv.zsh
+  source $HOME/.zsh/windows.zsh
   source $HOME/.zsh/zsh.zsh
-  source $HOME/.zsh/node.zsh
   source $HOME/.zshrc_local.zsh
 fi
