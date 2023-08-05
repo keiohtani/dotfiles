@@ -4,20 +4,13 @@
 
 ### MacOS
 
-1. Install the apps
+1. Run shell files
 
     ```bash
-    sh install/install.sh
+    source ./install/mac.sh
     ```
 
-2. Set up the apps
-
-    ```bash
-    sh install/setup.sh
-    ```
-
-3. Set up login items in Preferences/Users & Groups
-4. Move MacOS preference files
+2. Move MacOS preference files
 
     ```bash
     cp ./system/* /Library/Prefrences/
@@ -25,7 +18,9 @@
 
 ### WSL2
 
-`source install/wsl.sh`
+```bash
+source install/wsl.sh
+```
 
 ## Chrome Extensions
 
