@@ -1,32 +1,30 @@
 #!/bin/bash 
 
-BASE_DIR=$(dirname $0)
+# Set up zsh
+source shell.sh
 
-BREW_FILE=brew.txt
-BREW_CASK_FILE=brewcask.txt
-BREW_TAP_FILE=tap.txt
-
+# Install homebrew
 if ! command -v brew &> /dev/null; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> ~/.zprofile
     eval $(/opt/homebrew/bin/brew shellenv)
 fi
 
-brew update
-brew upgrade
-brew upgrade --cask
+source ./brew.sh
 
-for i in `cat $BASE_DIR/$BREW_FILE`
-do
-    if ! brew ls --versions $i > /dev/null; then brew install $i; fi
-done
+## Install brew cask applications
+BREW_CASK_FILE=brewcask.txt
 
 for i in `cat $BASE_DIR/$BREW_CASK_FILE`
 do
     if ! brew ls --cask --versions $i > /dev/null; then brew install --cask $i; fi
 done
 
-for i in `cat $BASE_DIR/$BREW_TAP_FILE`
-do
-    brew tap $i
-done
+# Install node
+
+source ./node.sh
+
+# MacOS system configs
+defaults write -g ApplePressAndHoldEnabled -bool false
+defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)

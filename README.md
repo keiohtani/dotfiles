@@ -2,6 +2,8 @@
 
 ## How to get started
 
+### MacOS
+
 1. Install the apps
 
     ```bash
@@ -20,6 +22,10 @@
     ```bash
     cp ./system/* /Library/Prefrences/
     ```
+
+### WSL2
+
+`source install/wsl.sh`
 
 ## Chrome Extensions
 
