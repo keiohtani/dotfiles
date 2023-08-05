@@ -1,8 +1,3 @@
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# Resolves the slow autocompletion issue https://stackoverflow.com/a/76746393/12090110
-unsetopt pathdirs
-
 source $HOME/.zsh/bat.zsh
 source $HOME/.zsh/docker.zsh
 source $HOME/.zsh/dotnet.zsh
@@ -25,3 +20,11 @@ source $HOME/.zshrc_local.zsh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Resolves the slow autocompletion issue https://stackoverflow.com/a/76746393/12090110
+unsetopt pathdirs
+
+# Disable beeping sound
+unsetopt beep
