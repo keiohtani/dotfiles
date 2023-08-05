@@ -1,3 +1,5 @@
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 source $HOME/.zsh/tmux.zsh
 
 if [ "$TMUX" ]; then
