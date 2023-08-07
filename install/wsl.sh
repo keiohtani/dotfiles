@@ -36,3 +36,6 @@ source install/brew.sh
 source install/neovim.sh
 source install/configs.sh
 source install/shell.sh
+
+## Install trash-cli
+npm install --global trash-cli
