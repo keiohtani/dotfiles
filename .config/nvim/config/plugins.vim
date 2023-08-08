@@ -54,3 +54,8 @@ silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 
 " fubitive setup
 let g:fubitive_domain_pattern = 'git\.forge\.lmig\.com'
+
+" vim-system-copy
+if system('uname -r | grep WSL')
+  let g:system_copy#copy_command='clip.exe'
+endif
