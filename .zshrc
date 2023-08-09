@@ -107,11 +107,6 @@ unsetopt pathdirs
 # Disable beeping sound
 unsetopt beep
 
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-
 autoload -U compinit
 
 export EDITOR="nvim"
@@ -125,3 +120,5 @@ export KEYTIMEOUT=25
 bindkey -M viins '^E'  autosuggest-accept
 bindkey -M viins '^d' exit_zsh
 bindkey -M vicmd '^d' exit_zsh
+
+eval "$(starship init zsh)"
