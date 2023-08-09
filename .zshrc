@@ -1,3 +1,25 @@
+# tmux 
+# https://qiita.com/ssh0/items/a9956a74bff8254a606a
+
+if [[ ! -n $TMUX ]]; then
+  # get the IDs
+  ID="`tmux list-sessions`"
+  if [[ -z "$ID" ]]; then
+    tmux new-session
+  else 
+    create_new_session="Create New Session"
+    ID="$ID\n${create_new_session}:"
+    ID="`echo $ID | fzf | cut -d: -f1`"
+    if [[ "$ID" = "${create_new_session}" ]]; then
+      tmux new-session
+    elif [[ -n "$ID" ]]; then
+      tmux attach-session -t "$ID"
+    fi
+  fi
+fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 if type nvim &>/dev/null; then
   alias vim='nvim'
 fi
@@ -5,11 +27,6 @@ fi
 if type bat &>/dev/null; then
   export BAT_THEME='Solarized (light)'
   alias cat="bat --color=always"
-fi
-
-if type docker &> /dev/null; then
-    alias dcc='docker-compose'
-    alias dc='docker'
 fi
 
 if type dust &>/dev/null; then
@@ -49,12 +66,11 @@ if type rg &> /dev/null; then
   alias gm='git merge'
   alias gs='git stash'
   alias gsp='git stash pop'
+fi
 
-
-  if [[ $(uname) = 'Linux' ]]; then
-  elif [[ $(uname) = 'Darwin' ]]; then
-    ssh-add -K ~/.ssh/id_ed25519 &>/dev/null
-  fi
+if [[ $(uname) = 'Linux' ]]; then
+elif [[ $(uname) = 'Darwin' ]]; then
+  ssh-add -K ~/.ssh/id_ed25519 &>/dev/null
 fi
 
 export NVM_DIR="$HOME/.nvm"
@@ -62,11 +78,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 if type procs &>/dev/null; then
-    alias ps="procs"
+  alias ps="procs"
 fi
 
 if type rbenv &> /dev/null; then
-    eval "$(rbenv init - zsh)"
+  eval "$(rbenv init - zsh)"
 fi
 
 if [[ $(uname) = 'Linux' ]]; then
@@ -74,20 +90,18 @@ if [[ $(uname) = 'Linux' ]]; then
 fi
 
 if type brew &> /dev/null; then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   export HOMEBREW_NO_INSTALL_FROM_API=1
   echo insecure >> ~/.curlrc
   export HOMEBREW_CURLRC=1
 fi
 
-
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
-    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
-    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
-    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
-        print -P "%F{33} %F{34}Installation successful.%f%b" || \
-        print -P "%F{160} The clone has failed.%f%b"
+  print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+  command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+  command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+    print -P "%F{33} %F{34}Installation successful.%f%b" || \
+    print -P "%F{160} The clone has failed.%f%b"
 fi
 
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
@@ -117,7 +131,7 @@ SAVEHIST=1000
 
 export KEYTIMEOUT=25
 
-bindkey -M viins '^E'  autosuggest-accept
+bindkey -M viins '^E' autosuggest-accept
 bindkey -M viins '^d' exit_zsh
 bindkey -M vicmd '^d' exit_zsh
 
