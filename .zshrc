@@ -126,8 +126,10 @@ autoload -U compinit
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-HISTSIZE=1000
-SAVEHIST=1000
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
 
 export KEYTIMEOUT=25
 
