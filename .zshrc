@@ -18,6 +18,8 @@ if [[ ! -n $TMUX ]]; then
   fi
 fi
 
+alias open="explorer.exe"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 if type nvim &>/dev/null; then
