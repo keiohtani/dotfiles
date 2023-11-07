@@ -34,6 +34,9 @@
 ```
 4. In a TMUX session, press prefix (`ctr` + `t`) + `I` to install the plugins
 
+### Troubleshooting
+- https://learn.microsoft.com/en-us/answers/questions/1296124/how-to-increase-memory-and-cpu-limits-for-wsl2-win
+
 ### Additional settings required to use Git Credential Manager (https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-git#git-credential-manager-setup)
 `git config --global credential.helper "/mnt/c/Users/kohtani/AppData/Local/Programs/Git/mingw64/bin/git-credential-manager.exe"`
 
