@@ -1,12 +1,12 @@
 " Specify a directory for plugins
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'HerringtonDarkholme/yats.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'altercation/vim-colors-solarized'
 Plug 'alvan/vim-closetag'
 Plug 'christoomey/vim-system-copy'
 Plug 'dkarter/bullets.vim', { 'for': 'markdown'}
+Plug 'folke/tokyonight.nvim'
+Plug 'rebelot/kanagawa.nvim'
 Plug 'itchyny/lightline.vim'
 Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -19,9 +19,9 @@ Plug 'kana/vim-textobj-function'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
+Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'machakann/vim-highlightedyank'
 Plug 'majutsushi/tagbar'
-Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'roginfarrer/vim-dirvish-dovish', {'branch': 'main'}
 Plug 'skywind3000/asyncrun.vim'
