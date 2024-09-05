@@ -18,8 +18,6 @@ if [[ ! -n $TMUX ]]; then
   fi
 fi
 
-alias open="explorer.exe"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 if type nvim &>/dev/null; then
@@ -71,6 +69,7 @@ if type rg &> /dev/null; then
 fi
 
 if [[ $(uname) = 'Linux' ]]; then
+  alias open="explorer.exe"
 elif [[ $(uname) = 'Darwin' ]]; then
   ssh-add -K ~/.ssh/id_ed25519 &>/dev/null
 fi
