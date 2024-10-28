@@ -24,13 +24,5 @@ BetterTouchTool
 
 alacritty
 visual-studio-code
-postman
-insomnia
-docker
 
 notion
-brave-browser
-microsoft-powerpoint
-microsoft-word
-slack
-zoom
