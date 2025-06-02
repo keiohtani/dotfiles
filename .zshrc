@@ -114,8 +114,8 @@ zinit light zsh-users/zsh-autosuggestions
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#859900,underline"
 
 zinit ice depth=1
-zinit light jeffreytse/zsh-vi-mode
-ZVM_VI_INSERT_ESCAPE_BINDKEY=jj
+# zinit light jeffreytse/zsh-vi-mode
+# ZVM_VI_INSERT_ESCAPE_BINDKEY=jj
 
 # Resolves the slow autocompletion issue https://stackoverflow.com/a/76746393/12090110
 unsetopt pathdirs
@@ -138,5 +138,7 @@ export KEYTIMEOUT=25
 bindkey -M viins '^E' autosuggest-accept
 bindkey -M viins '^d' exit_zsh
 bindkey -M vicmd '^d' exit_zsh
+
+export TERM=xterm-256color
 
 eval "$(starship init zsh)"
