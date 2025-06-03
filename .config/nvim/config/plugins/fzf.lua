@@ -1,5 +1,5 @@
 -- fzf.vim
-vim.keymap.set('n', '<C-f>', "len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached'", { expr = true })
+vim.keymap.set('n', '<C-f>', "len(system('git rev-parse')) ? ':Files<CR>' : ':GFiles --exclude-standard --others --cached<CR>'", { expr = true })
 vim.keymap.set('n', '<C-s>', ':Rg<CR>', { noremap = true })
 vim.keymap.set('n', '<C-b>', ':Buffers<CR>', { noremap = true })
 
