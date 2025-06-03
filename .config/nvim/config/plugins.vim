@@ -6,7 +6,7 @@ Plug 'alvan/vim-closetag'
 Plug 'christoomey/vim-system-copy'
 Plug 'dkarter/bullets.vim', { 'for': 'markdown'}
 Plug 'folke/tokyonight.nvim'
-Plug 'rebelot/kanagawa.nvim'
+Plug 'github/copilot.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -23,6 +23,8 @@ Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'machakann/vim-highlightedyank'
 Plug 'majutsushi/tagbar'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-lua/plenary.nvim'
+Plug 'rebelot/kanagawa.nvim'
 Plug 'roginfarrer/vim-dirvish-dovish', {'branch': 'main'}
 Plug 'skywind3000/asyncrun.vim'
 Plug 'tommcdo/vim-fubitive'
@@ -57,5 +59,6 @@ let g:fubitive_domain_pattern = 'git\.forge\.lmig\.com'
 
 " vim-system-copy
 if system('uname -r | grep WSL')
-  let g:system_copy#copy_command='clip.exe'
+  let g:system_copy#copy_command='/mnt/c/Windows/System32/clip.exe'
 endif
+
