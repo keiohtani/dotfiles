@@ -27,6 +27,7 @@ Plug('neoclide/coc.nvim', { branch = 'release' })
 Plug('nvim-lua/plenary.nvim')
 Plug('rebelot/kanagawa.nvim')
 Plug('roginfarrer/vim-dirvish-dovish', { branch = 'main' })
+Plug('CopilotC-Nvim/CopilotChat.nvim')
 Plug('skywind3000/asyncrun.vim')
 Plug('tommcdo/vim-fubitive')
 Plug('tomtom/tcomment_vim')
@@ -78,5 +79,5 @@ vim.g.fubitive_domain_pattern = 'git\\.forge\\.lmig\\.com'
 
 -- vim-system-copy
 if vim.fn.system('uname -r | grep WSL') ~= "" then
-  vim.g.system_copy_copy_command = '/mnt/c/Windows/System32/clip.exe'
+  vim.g["system_copy#copy_command"] = '/mnt/c/Windows/System32/clip.exe'
 end
