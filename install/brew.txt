@@ -12,7 +12,6 @@ procs
 pyenv
 python3
 ripgrep
-speedtest
 tig
 tmux
 trash
@@ -20,9 +19,5 @@ vifm
 zsh-autosuggestions
 
 karabiner-elements
-BetterTouchTool
 
 alacritty
-visual-studio-code
-
-notion
