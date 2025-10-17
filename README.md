@@ -1,5 +1,3 @@
-# dotfiles
-
 # How to get started
 
 ## MacOS
