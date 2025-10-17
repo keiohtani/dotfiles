@@ -33,3 +33,5 @@
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 [init]
 	templatedir = ~/.git-templates/git-secrets
+[http]
+	sslCAInfo = /Users/kohtani/.ssl/cacert_corporate_bundle.pem

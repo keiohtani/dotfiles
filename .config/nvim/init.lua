@@ -13,8 +13,11 @@ require('config.functions')
 -- Load plugins configuration
 require('config.plugins')
 
--- Theme settings
-vim.o.termguicolors = true
-vim.o.background = "dark"
--- vim.cmd[[colorscheme tokyonight-night]]
-vim.cmd[[colorscheme kanagawa]]
+-- ~/.config/nvim/init.lua
+vim.opt.termguicolors = true
+vim.o.background = "dark"   -- or "light" to match your Terminal profile
+vim.cmd("colorscheme solarized8")  -- or 'solarized'
+
+-- Disable Ruby
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_perl_provider = 0
