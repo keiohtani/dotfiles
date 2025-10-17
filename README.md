@@ -13,7 +13,7 @@
 2. Move MacOS preference files
 
     ```bash
-    cp ./system/* /Library/Prefrences/
+    sudo cp ./system/* /Library/Preferences/
     ```
     
 3. In a TMUX session, press prefix (`ctr` + `t`) + `I` to install the plugins
