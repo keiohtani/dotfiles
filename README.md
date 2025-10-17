@@ -7,7 +7,7 @@
 1. Run shell files
 
     ```bash
-    source ./install/mac.sh
+    bash ./install/mac.sh
     ```
 
 2. Move MacOS preference files
@@ -33,6 +33,13 @@
 "fontSize": 9
 ```
 4. In a TMUX session, press prefix (`ctr` + `t`) + `I` to install the plugins
+
+## General
+- Set up configs
+`source install/configs.sh`
+
+### VSCode
+https://github.com/keiohtani/dotfiles/blob/master/vscode/README.md
 
 ### Troubleshooting
 - https://learn.microsoft.com/en-us/answers/questions/1296124/how-to-increase-memory-and-cpu-limits-for-wsl2-win
